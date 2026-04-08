@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketwake · BD Pipeline Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&family=Space+Grotesk:wght@500&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --mw-beige:#EAE8E1;--mw-black:#0C0C0C;--mw-white:#F9F9F9;--mw-off-white:#F0F1F2;
+  --mw-neon-yellow:#EEFF25;--mw-neon-green:#CEFF58;--mw-blue:#0038FF;
+  --mw-muted-green:#B4C6BB;--mw-orange:#FF5E30;
+  --font-display:'Spectral',serif;--font-label:'Space Grotesk',sans-serif;--font-body:'Inter Tight',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-body);font-size:11px;font-weight:300;min-height:100vh;}
+
+.header{background:var(--mw-black);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:17px;color:var(--mw-white);letter-spacing:-0.02em;}
+.header-right{display:flex;align-items:center;gap:16px;}
+.header-title{font-family:var(--font-label);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);}
+.week-badge{background:var(--mw-neon-yellow);color:var(--mw-black);font-family:var(--font-label);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;padding:3px 10px;}
+
+.dashboard{padding:24px 28px;max-width:1440px;margin:0 auto;display:grid;gap:24px;}
+.section-label{font-family:var(--font-label);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--mw-muted-green);margin-bottom:10px;}
+.two-col{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;}
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;}
+
+/* SUMMARY BAR */
+.summary-bar{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1.2fr;gap:12px;}
+.sum-card{background:var(--mw-white);padding:18px 16px;border-top:3px solid var(--mw-muted-green);}
+.sum-card.s-nb{border-color:var(--mw-blue);}
+.sum-card.s-rn{border-color:var(--mw-neon-green);}
+.sum-card.s-wt{border-color:var(--mw-orange);}
+.sum-card.s-total{background:var(--mw-black);border-color:var(--mw-neon-yellow);}
+.sum-label{font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);margin-bottom:6px;}
+.sum-card.s-total .sum-label{color:var(--mw-muted-green);}
+.sum-value{font-family:var(--font-display);font-size:26px;font-weight:200;line-height:1;margin-bottom:3px;}
+.sum-card.s-total .sum-value{color:var(--mw-neon-yellow);font-size:30px;}
+.sum-card.s-wt .sum-value{color:var(--mw-orange);}
+.sum-sub{font-size:9px;font-weight:300;color:var(--mw-muted-green);}
+.split-bar{margin-top:8px;height:3px;background:var(--mw-off-white);}
+.split-fill{height:3px;}
+
+/* STAGE GRID */
+.stage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:10px;}
+.stage-card{background:var(--mw-white);padding:14px 12px;border-top:3px solid var(--mw-muted-green);}
+.stage-card.s-lead{border-color:var(--mw-muted-green);}
+.stage-card.s-scope{border-color:#9b8fdb;}
+.stage-card.s-prop{border-color:var(--mw-orange);}
+.stage-card.s-sow{border-color:var(--mw-neon-green);}
+.s-name{font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);margin-bottom:5px;}
+.s-val{font-family:var(--font-display);font-size:20px;font-weight:200;line-height:1;margin-bottom:2px;}
+.s-cnt{font-size:9px;color:var(--mw-muted-green);}
+
+/* CARD */
+.card{background:var(--mw-white);overflow:hidden;}
+.card-header{background:var(--mw-black);padding:10px 18px;display:flex;align-items:center;justify-content:space-between;}
+.card-title{font-family:var(--font-label);font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-white);}
+.card-sub{font-family:var(--font-label);font-size:8px;font-weight:500;color:var(--mw-neon-yellow);text-transform:uppercase;letter-spacing:.06em;}
+
+/* OPP TABLE */
+.opp-table{width:100%;border-collapse:collapse;}
+.opp-table th{padding:7px 14px;text-align:left;font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);background:var(--mw-off-white);border-bottom:1px solid var(--mw-beige);}
+.opp-table td{padding:9px 14px;border-bottom:1px solid var(--mw-beige);vertical-align:top;}
+.opp-table tbody tr:hover{background:var(--mw-off-white);}
+.opp-name{font-weight:500;font-size:11px;}
+.opp-close{font-size:9px;color:var(--mw-muted-green);}
+.opp-val{font-family:var(--font-display);font-size:13px;font-weight:200;}
+.opp-wtd{font-size:9px;color:var(--mw-orange);margin-top:1px;}
+.pill{display:inline-block;padding:2px 7px;font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;}
+.p-lead{background:var(--mw-off-white);color:var(--mw-muted-green);}
+.p-scope{background:#f0eeff;color:#6b5fd4;}
+.p-disc{background:#0038FF18;color:var(--mw-blue);}
+.p-prop{background:#FF5E3022;color:var(--mw-orange);}
+.p-sow{background:#CEFF5830;color:#3a6b00;}
+.type-badge{display:inline-block;padding:1px 5px;font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-left:4px;}
+.tb-nb{background:#0038FF18;color:var(--mw-blue);}
+.tb-rn{background:#CEFF5830;color:#3a6b00;}
+.next-step{font-size:10px;}
+.no-step{font-size:10px;color:var(--mw-muted-green);font-style:italic;}
+.overdue{color:var(--mw-orange) !important;font-weight:500;}
+.hs-link{color:var(--mw-blue);text-decoration:none;}
+.hs-link:hover{text-decoration:underline;}
+
+/* KEY DATES */
+.date-item{padding:12px 18px;border-bottom:1px solid var(--mw-beige);display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:12px;}
+.date-item:last-child{border-bottom:none;}
+.date-block{text-align:center;background:var(--mw-black);padding:7px 4px;}
+.date-mon{font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--mw-neon-yellow);}
+.date-day{font-family:var(--font-display);font-size:20px;font-weight:200;color:var(--mw-white);line-height:1;}
+.date-co{font-weight:500;font-size:11px;margin-bottom:2px;}
+.date-desc{font-size:10px;color:var(--mw-muted-green);}
+.urg{font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;padding:3px 7px;white-space:nowrap;}
+.u-hot{background:var(--mw-orange);color:var(--mw-white);}
+.u-soon{background:var(--mw-neon-yellow);color:var(--mw-black);}
+.u-ok{background:var(--mw-muted-green);color:var(--mw-black);}
+
+/* ROADBLOCKS */
+.rb-item{padding:12px 18px;border-bottom:1px solid var(--mw-beige);display:flex;gap:10px;align-items:flex-start;}
+.rb-item:last-child{border-bottom:none;}
+.rb-dot{width:6px;height:6px;border-radius:50%;margin-top:4px;flex-shrink:0;}
+.rb-red{background:var(--mw-orange);}
+.rb-yellow{background:var(--mw-neon-yellow);}
+.rb-green{background:var(--mw-neon-green);}
+.rb-co{font-weight:500;font-size:11px;margin-bottom:2px;}
+.rb-issue{font-size:10px;color:#555;margin-bottom:3px;}
+.rb-action{font-size:10px;color:var(--mw-blue);font-weight:400;}
+
+/* TASKS */
+.task-item{padding:11px 18px;border-bottom:1px solid var(--mw-beige);display:flex;align-items:flex-start;gap:10px;}
+.task-item:last-child{border-bottom:none;}
+.task-check{width:13px;height:13px;border:1.5px solid var(--mw-muted-green);border-radius:2px;flex-shrink:0;margin-top:2px;}
+.task-subject{font-size:11px;font-weight:500;margin-bottom:2px;}
+.task-body{font-size:9px;color:var(--mw-muted-green);}
+.task-due{font-size:8px;font-family:var(--font-label);font-weight:500;text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;margin-left:auto;flex-shrink:0;align-self:center;}
+.td-none{background:var(--mw-off-white);color:var(--mw-muted-green);}
+.td-soon{background:var(--mw-neon-yellow);color:var(--mw-black);}
+.td-over{background:var(--mw-orange);color:var(--mw-white);}
+
+/* MEETINGS */
+.mtg-item{padding:11px 18px;border-bottom:1px solid var(--mw-beige);display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:12px;}
+.mtg-item:last-child{border-bottom:none;}
+.mtg-date{text-align:center;}
+.mtg-mon{font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--mw-muted-green);}
+.mtg-day{font-family:var(--font-display);font-size:17px;font-weight:200;line-height:1;}
+.mtg-title{font-size:11px;font-weight:500;margin-bottom:2px;}
+.mtg-time{font-size:9px;color:var(--mw-muted-green);}
+.mtg-badge{font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;padding:2px 6px;white-space:nowrap;}
+.mb-today{background:var(--mw-neon-yellow);color:var(--mw-black);}
+.mb-done{background:var(--mw-neon-green);color:#2a5a00;}
+.mb-sched{background:#0038FF18;color:var(--mw-blue);}
+.mb-log{background:var(--mw-off-white);color:var(--mw-muted-green);}
+
+/* AI ANALYSIS */
+.ai-card{background:var(--mw-black);padding:18px 22px;border-left:4px solid var(--mw-neon-yellow);}
+.ai-label{font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-neon-yellow);margin-bottom:8px;}
+.ai-text{font-size:11px;color:var(--mw-off-white);line-height:1.65;font-weight:300;}
+.ai-meta{font-size:9px;color:#444;font-family:var(--font-label);letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:8px;}
+
+.footer{padding:12px 28px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--mw-muted-green);opacity:.55;}
+.footer-text{font-size:9px;font-weight:300;color:var(--mw-muted-green);}
+.empty{padding:18px;text-align:center;color:var(--mw-muted-green);font-style:italic;font-size:10px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <span class="logo">Marketwake</span>
+  <div class="header-right">
+    <span class="header-title">BD Pipeline Dashboard</span>
+    <span class="week-badge" id="weekBadge"></span>
+  </div>
+</div>
+
+<div class="dashboard">
+
+  <div>
+    <div class="section-label">01 — Pipeline Summary</div>
+    <div class="summary-bar" id="summaryBar"></div>
+  </div>
+
+  <div>
+    <div class="section-label">02 — Pipeline by Stage</div>
+    <div class="stage-grid" id="stageGrid"></div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="section-label">03 — Top Opportunities</div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Active Deals</span>
+          <span class="card-sub" id="oppCount"></span>
+        </div>
+        <div style="overflow-x:auto" id="oppTableWrap"></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">04 — Key Dates</div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Close Dates & Deadlines</span></div>
+        <div id="keyDates"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="three-col">
+    <div>
+      <div class="section-label">05 — Roadblocks</div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Blockers & Risks</span></div>
+        <div id="roadblocks"></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">06 — Open Tasks</div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">To-Do</span>
+          <span class="card-sub" id="taskCount"></span>
+        </div>
+        <div id="tasksList"></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">07 — Meeting Activity</div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Recent BD Meetings</span></div>
+        <div id="meetingsList"></div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="section-label">08 — Pipeline Analysis</div>
+    <div class="ai-card">
+      <div class="ai-label">Claude · Pipeline Read</div>
+      <div class="ai-text" id="aiText"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span class="footer-text">Marketwake · BD Dashboard · Internal Use Only</span>
+  <span class="footer-text" id="syncNote"></span>
+</div>
+
+<script>
+const NB_PIPE = '57c08100-c4cd-4a1e-a2ac-e90519f45454';
+const RN_PIPE = 'fe3127d4-2fac-46cc-af91-d21cd0ce70cd';
+
+const STAGE_MAP = {
+  '267918443':'Lead','947627921':'Lead','937169519':'Lead','942502151':'Lead',
+  '1247287884':'Lead','1090940083':'On Hold',
+  '26b63b8f-a58d-4421-bcad-0273a00326db':'Scoping',
+  'd099e80a-b312-4893-b71f-a197a206f3f2':'Discovery',
+  '270cf2bd-d2bc-4047-bf7b-c5e94032c0be':'Proposal',
+  '662a4dd1-4e30-41b7-aa48-84cebaad307f':'Proposal Sent',
+  'd5933d4d-7f05-4d92-b4b2-b711fb063791':'Proposal Accepted',
+  'bc070aa3-8898-42cd-b881-44e549a5f664':'Pitch Call',
+  '0890bbc4-2d85-4e1f-8381-286da6548c41':'In Review',
+  '1269293397':'Proposal Revisions',
+  '9d861ce8-c36c-40c2-b0c4-ec76a096cb1e':'SOW',
+  '71c2b12f-52fc-4c95-b544-5adaa314c52c':'SOW Sent',
+  '267918444':'Legal',
+  'a3f0d835-433c-498b-b6e8-2e56ecedada8':'Negotiation',
+};
+
+// ─── LIVE DATA — synced Apr 3, 2026 ──────────────
+const DEALS = [
+  {id:'58332124842',name:'Elevate Aviation Group - RFP',amount:255000,prob:0.95,pipe:NB_PIPE,stageId:'9d861ce8-c36c-40c2-b0c4-ec76a096cb1e',close:'2026-04-30',nextStep:'',lastAct:null,contacts:1},
+  {id:'58295581111',name:'E3Tech - Website Redesign + Brand Strategy',amount:92000,prob:0.35,pipe:NB_PIPE,stageId:'26b63b8f-a58d-4421-bcad-0273a00326db',close:'2026-05-31',nextStep:'Schedule follow-up call for Kristen to bring on other E3Tech stakeholders',lastAct:'2026-04-02',contacts:1},
+  {id:'58406469758',name:'Advantive - Brand Identity + Rollout',amount:77895,prob:0.35,pipe:NB_PIPE,stageId:'270cf2bd-d2bc-4047-bf7b-c5e94032c0be',close:'2026-03-31',nextStep:'',lastAct:null,contacts:1},
+  {id:'58406346571',name:'Maven - Renewal',amount:57278,prob:0.20,pipe:NB_PIPE,stageId:'267918443',close:'2027-03-01',nextStep:'',lastAct:null,contacts:1},
+  {id:'58406408516',name:'Yamaha - Renewal',amount:39375,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-01',nextStep:'',lastAct:null,contacts:1},
+  {id:'58406408251',name:'Phosphorus - Renewal',amount:23835,prob:0.35,pipe:RN_PIPE,stageId:'d099e80a-b312-4893-b71f-a197a206f3f2',close:'2026-03-31',nextStep:'',lastAct:'2026-03-30',contacts:1},
+  {id:'58406657146',name:'Yakima Valley Hops - Renewal',amount:20990,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-06-30',nextStep:'',lastAct:null,contacts:3},
+  {id:'58369020022',name:'Tackle - Video + Design',amount:11050,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-04-30',nextStep:'',lastAct:'2026-03-26',contacts:4},
+  {id:'58406285352',name:'SOLTECH - Renewal',amount:10311,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-11',nextStep:'',lastAct:null,contacts:3},
+  {id:'58406408547',name:'Discover Dunwoody - Renewal',amount:9623,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-30',nextStep:'',lastAct:null,contacts:1},
+  {id:'58406223008',name:'FairPlay AI - Renewal',amount:8169,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-12',nextStep:'',lastAct:null,contacts:1},
+  {id:'58406594816',name:'Iris - Renewal',amount:6699,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-01',nextStep:'',lastAct:null,contacts:2},
+  {id:'58406409507',name:'North Point Ministries - Renewal',amount:4725,prob:0.20,pipe:NB_PIPE,stageId:'267918443',close:'2026-06-01',nextStep:'',lastAct:null,contacts:0},
+  {id:'58167953966',name:'The Bunkr Golf Co',amount:0,prob:0.35,pipe:NB_PIPE,stageId:'26b63b8f-a58d-4421-bcad-0273a00326db',close:'2026-04-18',nextStep:'Schedule in-person discovery meeting at MW office',lastAct:'2026-04-02',contacts:1},
+  {id:'58369079064',name:'ezCater - RFP',amount:0,prob:0.20,pipe:NB_PIPE,stageId:'267918443',close:'2026-06-30',nextStep:'',lastAct:'2026-03-31',contacts:1},
+];
+
+const TASKS = [
+  {id:'106978467962',subject:'Follow up on ezCater - RFP',due:null,body:'Logged Mar 26'},
+  {id:'107402954593',subject:'Follow up on E3Tech - Website Redesign + Brand Strategy',due:null,body:'Logged Apr 2'},
+  {id:'107404670273',subject:'F/U w/ Kevin Norcross on LI',due:null,body:''},
+];
+
+const MEETINGS = [
+  {id:'107201362821',title:'Coffee Evan / Mike',start:'2026-04-03T12:30:00Z',end:'2026-04-03T13:30:00Z',outcome:null},
+  {id:'107185693315',title:'Evan <> Jeremy: Marketwake Intro Call',start:'2026-04-01T13:30:00Z',end:'2026-04-01T14:00:00Z',outcome:null},
+  {id:'106867767404',title:'Bunkr Golf x Marketwake | Growth Strategy Session',start:'2026-03-31T19:30:00Z',end:'2026-03-31T20:30:00Z',outcome:null},
+  {id:'106981705748',title:'Untitled Meeting',start:'2026-04-01T17:30:00Z',end:'2026-04-01T18:15:00Z',outcome:'SCHEDULED'},
+  {id:'106981282340',title:'Discovery Call',start:'2026-03-24T14:45:00Z',end:'2026-03-24T15:15:00Z',outcome:'COMPLETED'},
+  {id:'106870555662',title:'Intro Call',start:'2026-03-23T05:30:00Z',end:'2026-03-23T05:45:00Z',outcome:null},
+];
+
+// ─── HELPERS ─────────────────────────────────────
+const fmt = n => {
+  if(!n||isNaN(n)) return '—';
+  n=parseFloat(n);
+  return n>=1000000?'$'+(n/1e6).toFixed(1)+'M':n>=1000?'$'+(n/1000).toFixed(0)+'K':'$'+Math.round(n);
+};
+const fmtD = d => d ? new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}) : null;
+const fmtT = d => d ? new Date(d).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true}) : '';
+const sinceD = d => !d ? 999 : Math.floor((Date.now()-new Date(d))/86400000);
+const untilD = d => !d ? 999 : Math.floor((new Date(d)-Date.now())/86400000);
+const stageLbl = id => STAGE_MAP[id]||id||'Unknown';
+const isRenewal = d => d.pipe===RN_PIPE || d.name.toLowerCase().includes('renewal');
+
+function pillCls(l){
+  if(l.includes('Lead')||l.includes('Hold')) return 'p-lead';
+  if(l.includes('Scoping')) return 'p-scope';
+  if(l.includes('Discovery')||l.includes('Pitch')) return 'p-disc';
+  if(l.includes('Proposal')||l.includes('Review')||l.includes('Revision')||l.includes('Accepted')) return 'p-prop';
+  return 'p-sow';
+}
+
+// ─── RENDER: SUMMARY BAR ─────────────────────────
+function renderSummary(){
+  const renewals = DEALS.filter(isRenewal);
+  const newbiz   = DEALS.filter(d=>!isRenewal(d));
+  const nbVal    = newbiz.reduce((s,d)=>s+d.amount,0);
+  const rnVal    = renewals.reduce((s,d)=>s+d.amount,0);
+  const total    = nbVal+rnVal;
+  const weighted = DEALS.reduce((s,d)=>s+(d.amount*d.prob),0);
+  const nbPct    = total>0 ? Math.round(nbVal/total*100) : 0;
+
+  document.getElementById('summaryBar').innerHTML=`
+    <div class="sum-card s-nb">
+      <div class="sum-label">New Business</div>
+      <div class="sum-value">${fmt(nbVal)}</div>
+      <div class="sum-sub">${newbiz.length} deals</div>
+      <div class="split-bar"><div class="split-fill" style="width:${nbPct}%;background:var(--mw-blue)"></div></div>
+    </div>
+    <div class="sum-card s-rn">
+      <div class="sum-label">Renewals</div>
+      <div class="sum-value">${fmt(rnVal)}</div>
+      <div class="sum-sub">${renewals.length} deals</div>
+      <div class="split-bar"><div class="split-fill" style="width:${100-nbPct}%;background:var(--mw-neon-green)"></div></div>
+    </div>
+    <div class="sum-card s-wt">
+      <div class="sum-label">Weighted Value</div>
+      <div class="sum-value">${fmt(weighted)}</div>
+      <div class="sum-sub">probability-adjusted</div>
+    </div>
+    <div class="sum-card">
+      <div class="sum-label">NB vs Renewal Split</div>
+      <div class="sum-value" style="font-size:22px">${nbPct}% <span style="font-size:14px;opacity:.5">/</span> ${100-nbPct}%</div>
+      <div class="sum-sub">new biz share of total</div>
+    </div>
+    <div class="sum-card s-total">
+      <div class="sum-label">Total Pipeline</div>
+      <div class="sum-value">${fmt(total)}</div>
+      <div class="sum-sub">${DEALS.length} active deals</div>
+    </div>`;
+}
+
+// ─── RENDER: STAGE BREAKDOWN ─────────────────────
+function renderStages(){
+  const B=[
+    {l:'Lead / On Hold',c:'s-lead',v:0,n:0},
+    {l:'Scoping / Discovery',c:'s-scope',v:0,n:0},
+    {l:'Proposal',c:'s-prop',v:0,n:0},
+    {l:'SOW / Legal / Negotiation',c:'s-sow',v:0,n:0},
+  ];
+  DEALS.forEach(d=>{
+    const l=stageLbl(d.stageId); const a=d.amount;
+    if(l.includes('Lead')||l.includes('Hold')){B[0].v+=a;B[0].n++;}
+    else if(l.includes('Scoping')||l.includes('Discovery')||l.includes('Pitch')){B[1].v+=a;B[1].n++;}
+    else if(l.includes('Proposal')||l.includes('Review')||l.includes('Revision')||l.includes('Accepted')){B[2].v+=a;B[2].n++;}
+    else{B[3].v+=a;B[3].n++;}
+  });
+  document.getElementById('stageGrid').innerHTML=B.filter(b=>b.n>0).map(b=>
+    `<div class="stage-card ${b.c}"><div class="s-name">${b.l}</div><div class="s-val">${fmt(b.v)}</div><div class="s-cnt">${b.n} deal${b.n!==1?'s':''}</div></div>`
+  ).join('');
+}
+
+// ─── RENDER: OPP TABLE ───────────────────────────
+function renderOpps(){
+  document.getElementById('oppCount').textContent=DEALS.length+' Deals';
+  document.getElementById('oppTableWrap').innerHTML=`<table class="opp-table">
+    <thead><tr><th>Deal</th><th>Value</th><th>Stage</th><th>Next Step</th><th>Last Activity</th></tr></thead>
+    <tbody>${DEALS.slice(0,10).map(d=>{
+      const lbl=stageLbl(d.stageId);
+      const du=untilD(d.close);
+      const cCls=du<0||du<14?'overdue':'';
+      const badge=isRenewal(d)?'<span class="type-badge tb-rn">Renewal</span>':'<span class="type-badge tb-nb">New Biz</span>';
+      const ns=d.nextStep?`<div class="next-step">${d.nextStep}</div>`:`<div class="no-step">No next step</div>`;
+      const la=d.lastAct?sinceD(d.lastAct):null;
+      const laStr=la!==null?`<div class="opp-close ${la>10?'overdue':''}">${la}d ago</div>`:`<div class="opp-close overdue">No activity</div>`;
+      return `<tr>
+        <td>
+          <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+            <span class="opp-name"><a class="hs-link" href="https://app.hubspot.com/contacts/20433258/record/0-3/${d.id}" target="_blank">${d.name}</a></span>${badge}
+          </div>
+          ${d.close?`<div class="opp-close ${cCls}">Close ${fmtD(d.close)}</div>`:''}
+        </td>
+        <td><div class="opp-val">${fmt(d.amount)}</div><div class="opp-wtd">~${fmt(d.amount*d.prob)} wtd</div></td>
+        <td><span class="pill ${pillCls(lbl)}">${lbl}</span></td>
+        <td>${ns}</td>
+        <td>${laStr}</td>
+      </tr>`;
+    }).join('')}</tbody></table>`;
+}
+
+// ─── RENDER: KEY DATES ───────────────────────────
+function renderDates(){
+  const up=DEALS.filter(d=>d.close&&untilD(d.close)>-30&&untilD(d.close)<90)
+    .sort((a,b)=>new Date(a.close)-new Date(b.close)).slice(0,6);
+  if(!up.length){document.getElementById('keyDates').innerHTML='<div class="empty">No upcoming close dates</div>';return;}
+  document.getElementById('keyDates').innerHTML=up.map(d=>{
+    const dt=new Date(d.close);
+    const mon=dt.toLocaleDateString('en-US',{month:'short'}).toUpperCase();
+    const day=dt.getDate();
+    const du=untilD(d.close);
+    const [uc,ul]=du<0?['u-hot','OVERDUE']:du<10?['u-hot','HOT']:du<21?['u-soon','SOON']:['u-ok','OK'];
+    return `<div class="date-item">
+      <div class="date-block"><div class="date-mon">${mon}</div><div class="date-day">${day}</div></div>
+      <div><div class="date-co">${d.name}</div><div class="date-desc">${stageLbl(d.stageId)} · ${du<0?Math.abs(du)+' days overdue':du+' days out'}</div></div>
+      <span class="urg ${uc}">${ul}</span>
+    </div>`;
+  }).join('');
+}
+
+// ─── RENDER: ROADBLOCKS ──────────────────────────
+function renderRoadblocks(){
+  const B=[];
+  const od=DEALS.filter(d=>d.close&&untilD(d.close)<0);
+  if(od.length) B.push({dot:'rb-red',co:od.map(d=>d.name).join(', '),issue:`${od.length} deal${od.length>1?'s are':' is'} past close date with no resolution logged.`,act:'Update close dates in HubSpot this week.'});
+  const ns=DEALS.filter(d=>!d.nextStep&&!stageLbl(d.stageId).includes('Lead'));
+  if(ns.length) B.push({dot:'rb-yellow',co:ns.map(d=>d.name).slice(0,3).join(', ')+(ns.length>3?` +${ns.length-3} more`:''),issue:`${ns.length} active deals have no next step logged.`,act:'Add a next step for each before Monday pipeline review.'});
+  const st=DEALS.filter(d=>!stageLbl(d.stageId).includes('Lead')&&d.lastAct&&sinceD(d.lastAct)>14);
+  if(st.length) B.push({dot:'rb-yellow',co:st.map(d=>d.name).slice(0,3).join(', ')+(st.length>3?` +${st.length-3} more`:''),issue:`${st.length} deal${st.length>1?'s have':' has'} had no activity in 14+ days.`,act:'Send a value-add touch or re-engagement call.'});
+  const na=DEALS.filter(d=>!d.amount);
+  if(na.length) B.push({dot:'rb-yellow',co:na.map(d=>d.name).join(', '),issue:`${na.length} deal${na.length>1?'s have':' has'} $0 amount — missing from weighted pipeline total.`,act:'Add an estimated value range to each deal.'});
+  if(!B.length) B.push({dot:'rb-green',co:'No critical blockers',issue:'Pipeline looks clean. Keep momentum.',act:''});
+  document.getElementById('roadblocks').innerHTML=B.map(b=>`
+    <div class="rb-item">
+      <div class="rb-dot ${b.dot}" style="margin-top:5px"></div>
+      <div><div class="rb-co">${b.co}</div><div class="rb-issue">${b.issue}</div>${b.act?`<div class="rb-action">${b.act}</div>`:''}</div>
+    </div>`).join('');
+}
+
+// ─── RENDER: TASKS ───────────────────────────────
+function renderTasks(){
+  document.getElementById('taskCount').textContent=TASKS.length+' Open';
+  if(!TASKS.length){document.getElementById('tasksList').innerHTML='<div class="empty">No open tasks</div>';return;}
+  document.getElementById('tasksList').innerHTML=TASKS.map(t=>{
+    const du=t.due?untilD(t.due):null;
+    const badge=du===null?`<span class="task-due td-none">No Due Date</span>`:
+      du<0?`<span class="task-due td-over">Overdue</span>`:
+      du<7?`<span class="task-due td-soon">Due Soon</span>`:'';
+    return `<div class="task-item">
+      <div class="task-check"></div>
+      <div>
+        <div class="task-subject"><a class="hs-link" href="https://app.hubspot.com/tasks/20433258/view/all/task/${t.id}" target="_blank">${t.subject}</a></div>
+        ${t.body?`<div class="task-body">${t.body}</div>`:''}
+      </div>
+      ${badge}
+    </div>`;
+  }).join('');
+}
+
+// ─── RENDER: MEETINGS ────────────────────────────
+function renderMeetings(){
+  const today=new Date().toDateString();
+  const sorted=[...MEETINGS].sort((a,b)=>new Date(b.start)-new Date(a.start)).slice(0,6);
+  document.getElementById('meetingsList').innerHTML=sorted.map(m=>{
+    const dt=new Date(m.start);
+    const isToday=dt.toDateString()===today;
+    const mon=dt.toLocaleDateString('en-US',{month:'short'}).toUpperCase();
+    const day=dt.getDate();
+    const t1=fmtT(m.start)+(m.end?' – '+fmtT(m.end):'');
+    const badge=isToday?`<span class="mtg-badge mb-today">Today</span>`:
+      m.outcome==='COMPLETED'?`<span class="mtg-badge mb-done">Completed</span>`:
+      m.outcome==='SCHEDULED'?`<span class="mtg-badge mb-sched">Scheduled</span>`:
+      `<span class="mtg-badge mb-log">Logged</span>`;
+    const title=m.title&&m.title!=='Untitled Meeting'?m.title:'Untitled Meeting';
+    return `<div class="mtg-item">
+      <div class="mtg-date"><div class="mtg-mon">${mon}</div><div class="mtg-day">${day}</div></div>
+      <div><div class="mtg-title">${title}</div><div class="mtg-time">${t1}</div></div>
+      ${badge}
+    </div>`;
+  }).join('');
+}
+
+// ─── RENDER: ANALYSIS ────────────────────────────
+function renderAnalysis(){
+  const total=DEALS.reduce((s,d)=>s+d.amount,0);
+  const weighted=DEALS.reduce((s,d)=>s+(d.amount*d.prob),0);
+  const renewals=DEALS.filter(isRenewal);
+  const rnVal=renewals.reduce((s,d)=>s+d.amount,0);
+  const gap=total-weighted;
+
+  const text=[
+    `Your raw pipeline is ${fmt(total)}, but the probability-weighted number is ${fmt(weighted)} — a ${fmt(gap)} gap driven almost entirely by ${renewals.length} renewal deals sitting at 20% probability with no active engagement.`,
+    `Elevate Aviation ($255K, 95% probability) is carrying the weighted pipeline. If that deal slips, the forecast changes significantly. It has had no logged activity since March 26 and no next step — that needs to be addressed before the April 30 close date.`,
+    `Renewals represent ${fmt(rnVal)} in pipeline but are almost entirely in Lead stage. Yamaha, Iris, and SOLTECH all have May close dates — proactive outreach needs to start this week, not next.`,
+    `3 open tasks have no due dates set. Add dates to each so they surface in your weekly review — undated tasks don't get actioned.`,
+  ].join(' ');
+
+  document.getElementById('aiText').innerHTML=`<span class="ai-meta">Synced Apr 3, 2026 · Ask Claude to refresh for updated read</span>${text}`;
+}
+
+// ─── INIT ─────────────────────────────────────────
+(function(){
+  const now=new Date();
+  document.getElementById('weekBadge').textContent='Week of '+now.toLocaleDateString('en-US',{month:'long',day:'numeric'});
+  document.getElementById('syncNote').textContent='Data synced from HubSpot · Apr 3, 2026';
+  renderSummary();
+  renderStages();
+  renderOpps();
+  renderDates();
+  renderRoadblocks();
+  renderTasks();
+  renderMeetings();
+  renderAnalysis();
+})();
+</script>
+</body>
+</html>
