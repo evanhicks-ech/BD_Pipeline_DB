@@ -28,7 +28,7 @@ def fetch_deals():
             ]}],
             'properties': [
                 'dealname', 'amount', 'pipeline', 'dealstage', 'closedate',
-                'hs_next_step', 'hs_lastmodifieddate',
+                'hs_next_step', 'notes_last_updated', 'hs_lastmodifieddate',
                 'hs_deal_stage_probability', 'hs_probability', 'num_associated_contacts',
             ],
             'sorts': [{'propertyName': 'amount', 'direction': 'DESCENDING'}],
@@ -41,7 +41,7 @@ def fetch_deals():
         p = r['properties']
         prob_raw = float(p.get('hs_deal_stage_probability') or p.get('hs_probability') or 20)
         prob = prob_raw if prob_raw <= 1 else prob_raw / 100
-        last_act = p.get('hs_lastmodifieddate')
+        last_act = p.get('notes_last_updated') or p.get('hs_lastmodifieddate')
         deals.append({
             'id': r['id'],
             'name': p.get('dealname', ''),
