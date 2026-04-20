@@ -37,6 +37,7 @@ def fetch_deals():
             'filterGroups': [{'filters': [
                 {'propertyName': 'pipeline', 'operator': 'IN', 'values': [NB_PIPE, RN_PIPE]},
                 {'propertyName': 'hs_is_closed', 'operator': 'EQ', 'value': 'false'},
+                {'propertyName': 'dealstage', 'operator': 'NEQ', 'value': '1269283354'},
             ]}],
             'properties': [
                 'dealname', 'amount', 'pipeline', 'dealstage', 'closedate',
