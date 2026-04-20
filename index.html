@@ -65,12 +65,24 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
 /* OPP TABLE */
 .opp-table{width:100%;border-collapse:collapse;}
 .opp-table th{padding:7px 14px;text-align:left;font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);background:var(--mw-off-white);border-bottom:1px solid var(--mw-beige);}
-.opp-table td{padding:9px 14px;border-bottom:1px solid var(--mw-beige);vertical-align:top;}
-.opp-table tbody tr:hover{background:var(--mw-off-white);}
+.opp-table td{padding:9px 14px;border-bottom:1px solid var(--mw-beige);vertical-align:middle;}
+.deal-row{cursor:pointer;transition:background .1s;}
+.deal-row:hover{background:var(--mw-off-white);}
+.deal-row.open{background:#f5f4ee;}
+.detail-row{display:none;background:#f9f8f4;}
+.detail-row.open{display:table-row;}
+.detail-inner{padding:14px 18px 16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+.detail-block{}
+.detail-label{font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);margin-bottom:4px;}
+.detail-val{font-size:11px;line-height:1.5;}
+.detail-actions{display:flex;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--mw-beige);}
+.detail-btn{display:inline-block;padding:5px 12px;font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;background:var(--mw-black);color:var(--mw-white);}
+.detail-btn:hover{background:#333;}
 .opp-name{font-weight:500;font-size:11px;}
 .opp-close{font-size:9px;color:var(--mw-muted-green);}
 .opp-val{font-family:var(--font-display);font-size:13px;font-weight:200;}
 .opp-wtd{font-size:9px;color:var(--mw-orange);margin-top:1px;}
+.opp-owner{font-size:10px;color:#555;}
 .pill{display:inline-block;padding:2px 7px;font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;}
 .p-lead{background:var(--mw-off-white);color:var(--mw-muted-green);}
 .p-scope{background:#f0eeff;color:#6b5fd4;}
@@ -80,11 +92,14 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
 .type-badge{display:inline-block;padding:1px 5px;font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-left:4px;}
 .tb-nb{background:#0038FF18;color:var(--mw-blue);}
 .tb-rn{background:#CEFF5830;color:#3a6b00;}
-.next-step{font-size:10px;}
 .no-step{font-size:10px;color:var(--mw-muted-green);font-style:italic;}
 .overdue{color:var(--mw-orange) !important;font-weight:500;}
 .hs-link{color:var(--mw-blue);text-decoration:none;}
 .hs-link:hover{text-decoration:underline;}
+.deals-section-gap{margin-bottom:16px;}
+.deals-top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.expand-icon{font-size:9px;color:var(--mw-muted-green);margin-left:6px;transition:transform .2s;}
+.deal-row.open .expand-icon{transform:rotate(90deg);}
 
 /* KEY DATES */
 .date-item{padding:12px 18px;border-bottom:1px solid var(--mw-beige);display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:12px;}
@@ -158,17 +173,16 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
     <div class="stage-grid" id="stageGrid"></div>
   </div>
 
-  <div class="two-col">
-    <div>
-      <div class="section-label">03 — Top Opportunities</div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Active Deals</span>
-          <span class="card-sub" id="oppCount"></span>
-        </div>
-        <div style="overflow-x:auto" id="oppTableWrap"></div>
-      </div>
+  <div>
+    <div class="deals-top-bar">
+      <div class="section-label" style="margin-bottom:0">03 — Active Deals</div>
+      <a class="hs-link" style="font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;" href="https://app.hubspot.com/contacts/20433258/deals/list/view/all" target="_blank">View All in HubSpot →</a>
     </div>
+    <div class="deals-section-gap" id="nbDealsWrap"></div>
+    <div id="rnDealsWrap"></div>
+  </div>
+
+  <div class="two-col">
     <div>
       <div class="section-label">04 — Key Dates</div>
       <div class="card">
@@ -316,32 +330,104 @@ function renderStages(){
   ).join('');
 }
 
-// ─── RENDER: OPP TABLE ───────────────────────────
-function renderOpps(){
-  document.getElementById('oppCount').textContent=DEALS.length+' Deals';
-  document.getElementById('oppTableWrap').innerHTML=`<table class="opp-table">
-    <thead><tr><th>Deal</th><th>Value</th><th>Stage</th><th>Next Step</th><th>Last Activity</th></tr></thead>
-    <tbody>${DEALS.slice(0,10).map(d=>{
-      const lbl=stageLbl(d.stageId);
-      const du=untilD(d.close);
-      const cCls=du<0||du<14?'overdue':'';
-      const badge=isRenewal(d)?'<span class="type-badge tb-rn">Renewal</span>':'<span class="type-badge tb-nb">New Biz</span>';
-      const ns=d.nextStep?`<div class="next-step">${d.nextStep}</div>`:`<div class="no-step">No next step</div>`;
-      const la=d.lastAct?sinceD(d.lastAct):null;
-      const laStr=la!==null?`<div class="opp-close ${la>10?'overdue':''}">${la}d ago</div>`:`<div class="opp-close overdue">No activity</div>`;
-      return `<tr>
+/// ─── RENDER: OPP TABLE ───────────────────────────
+function dealTypeLabel(t){
+  if(!t) return '';
+  const m={'newbusiness':'New Business','existingbusiness':'Existing Business'};
+  return m[t] || t.replace(/_/g,' ');
+}
+
+function toggleDetail(id){
+  const row=document.getElementById('dr-'+id);
+  const main=document.getElementById('mr-'+id);
+  const isOpen=row.classList.contains('open');
+  row.classList.toggle('open',!isOpen);
+  main.classList.toggle('open',!isOpen);
+}
+
+function buildDealTable(deals, wrapperId, title){
+  if(!deals.length){
+    document.getElementById(wrapperId).innerHTML='';
+    return;
+  }
+  const total=deals.reduce((s,d)=>s+d.amount,0);
+  const weighted=deals.reduce((s,d)=>s+(d.amount*d.prob),0);
+  const rows=deals.map(d=>{
+    const lbl=stageLbl(d.stageId);
+    const du=d.close?untilD(d.close):999;
+    const cCls=du<0?'overdue':du<14?'overdue':'';
+    const la=d.lastAct?sinceD(d.lastAct):null;
+    const laStr=la!==null
+      ?`<span class="${la>21?'overdue':''}">${la}d ago</span>`
+      :`<span class="overdue">None</span>`;
+    const closeStr=d.close
+      ?`<div class="opp-close ${cCls}">${du<0?Math.abs(du)+'d overdue':fmtD(d.close)}</div>`:'';
+    const dtl=dealTypeLabel(d.dealType);
+
+    return `
+      <tr class="deal-row" id="mr-${d.id}" onclick="toggleDetail('${d.id}')">
         <td>
-          <div style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
-            <span class="opp-name"><a class="hs-link" href="https://app.hubspot.com/contacts/20433258/record/0-3/${d.id}" target="_blank">${d.name}</a></span>${badge}
+          <div style="display:flex;align-items:center;gap:6px">
+            <span class="opp-name">${d.name}</span>
+            <span class="expand-icon">▶</span>
           </div>
-          ${d.close?`<div class="opp-close ${cCls}">Close ${fmtD(d.close)}</div>`:''}
+          ${closeStr}
         </td>
-        <td><div class="opp-val">${fmt(d.amount)}</div><div class="opp-wtd">~${fmt(d.amount*d.prob)} wtd</div></td>
+        <td>
+          <div class="opp-val">${fmt(d.amount)}</div>
+          <div class="opp-wtd">~${fmt(d.amount*d.prob)} wtd</div>
+        </td>
         <td><span class="pill ${pillCls(lbl)}">${lbl}</span></td>
-        <td>${ns}</td>
+        <td class="opp-owner">${d.owner||'—'}</td>
         <td>${laStr}</td>
+      </tr>
+      <tr class="detail-row" id="dr-${d.id}">
+        <td colspan="5" style="padding:0">
+          <div class="detail-inner">
+            <div class="detail-block">
+              <div class="detail-label">Next Step</div>
+              <div class="detail-val">${d.nextStep||'<span style="color:var(--mw-muted-green);font-style:italic">None logged</span>'}</div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Deal Info</div>
+              <div class="detail-val">
+                ${dtl?`<div>${dtl}</div>`:''}
+                <div>${d.contacts} contact${d.contacts!==1?'s':''} associated</div>
+                ${d.close?`<div>Close: ${fmtD(d.close)}${du<0?' <span class="overdue">('+Math.abs(du)+'d overdue)</span>':du<30?' ('+du+'d away)':''}</div>`:''}
+              </div>
+            </div>
+            <div class="detail-block">
+              <div class="detail-label">Description</div>
+              <div class="detail-val">${d.description||'<span style="color:var(--mw-muted-green);font-style:italic">No description</span>'}</div>
+            </div>
+          </div>
+          <div class="detail-actions" style="padding:0 18px 14px">
+            <a class="detail-btn" href="https://app.hubspot.com/contacts/20433258/record/0-3/${d.id}" target="_blank">Open in HubSpot →</a>
+          </div>
+        </td>
       </tr>`;
-    }).join('')}</tbody></table>`;
+  }).join('');
+
+  document.getElementById(wrapperId).innerHTML=`
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">${title}</span>
+        <span class="card-sub">${deals.length} deals · ${fmt(total)} · ${fmt(weighted)} wtd</span>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="opp-table">
+          <thead><tr><th>Deal</th><th>Value</th><th>Stage</th><th>Owner</th><th>Last Activity</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+function renderOpps(){
+  const nb=DEALS.filter(d=>!isRenewal(d));
+  const rn=DEALS.filter(isRenewal);
+  buildDealTable(nb,'nbDealsWrap','New Business');
+  buildDealTable(rn,'rnDealsWrap','Renewals');
 }
 
 // ─── RENDER: KEY DATES ───────────────────────────

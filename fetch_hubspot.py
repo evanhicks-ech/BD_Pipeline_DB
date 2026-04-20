@@ -17,7 +17,19 @@ def ms_to_date(ms):
     try: return datetime.fromtimestamp(int(ms)/1000, tz=timezone.utc).strftime('%Y-%m-%d')
     except: return None
 
+def fetch_owner_map():
+    resp = requests.get('https://api.hubapi.com/crm/v3/owners?limit=100', headers=HEADERS)
+    resp.raise_for_status()
+    owners = {}
+    for o in resp.json().get('results', []):
+        first = o.get('firstName') or ''
+        last = o.get('lastName') or ''
+        name = f"{first} {last}".strip() or 'Unknown'
+        owners[str(o['id'])] = name
+    return owners
+
 def fetch_deals():
+    owner_map = fetch_owner_map()
     resp = requests.post(
         'https://api.hubapi.com/crm/v3/objects/deals/search',
         headers=HEADERS,
@@ -30,6 +42,7 @@ def fetch_deals():
                 'dealname', 'amount', 'pipeline', 'dealstage', 'closedate',
                 'hs_next_step', 'notes_last_updated', 'hs_lastmodifieddate',
                 'hs_deal_stage_probability', 'hs_probability', 'num_associated_contacts',
+                'hubspot_owner_id', 'dealtype', 'description',
             ],
             'sorts': [{'propertyName': 'amount', 'direction': 'DESCENDING'}],
             'limit': 100,
@@ -42,6 +55,7 @@ def fetch_deals():
         prob_raw = float(p.get('hs_deal_stage_probability') or p.get('hs_probability') or 20)
         prob = prob_raw if prob_raw <= 1 else prob_raw / 100
         last_act = p.get('notes_last_updated') or p.get('hs_lastmodifieddate')
+        owner_id = str(p.get('hubspot_owner_id') or '')
         deals.append({
             'id': r['id'],
             'name': p.get('dealname', ''),
@@ -53,6 +67,9 @@ def fetch_deals():
             'nextStep': p.get('hs_next_step') or '',
             'lastAct': last_act[:10] if last_act else None,
             'contacts': int(p.get('num_associated_contacts') or 0),
+            'owner': owner_map.get(owner_id, 'Unassigned'),
+            'dealType': p.get('dealtype') or '',
+            'description': p.get('description') or '',
         })
     return deals
 

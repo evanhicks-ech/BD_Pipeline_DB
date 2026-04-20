@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-20T20:27:46.692581+00:00",
+  "synced": "2026-04-20T20:33:50.471193+00:00",
   "deals": [
     {
       "id": "54829708939",
@@ -11,7 +11,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-05",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58332124842",
@@ -23,7 +26,10 @@
       "close": null,
       "nextStep": "F/U w/ Rawan",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "newbusiness",
+      "description": ""
     },
     {
       "id": "57352056164",
@@ -35,7 +41,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Marley Barnett",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "56893201818",
@@ -47,7 +56,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-06",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "newbusiness",
+      "description": ""
     },
     {
       "id": "58369079064",
@@ -59,7 +71,10 @@
       "close": null,
       "nextStep": "RFI Questions due 4/9",
       "lastAct": "2026-04-09",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "newbusiness",
+      "description": ""
     },
     {
       "id": "43264128289",
@@ -71,7 +86,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-09-09",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58167953966",
@@ -83,7 +101,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "newbusiness",
+      "description": ""
     },
     {
       "id": "58295581111",
@@ -95,7 +116,10 @@
       "close": null,
       "nextStep": "Schedule follow-up call for Kristen to bring on other E3Tech stakeholders",
       "lastAct": "2026-04-08",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "newbusiness",
+      "description": ""
     },
     {
       "id": "54420957564",
@@ -107,7 +131,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-26",
-      "contacts": 2
+      "contacts": 2,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "55769677595",
@@ -119,7 +146,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-04",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57886709157",
@@ -131,7 +161,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Alex LeMieux",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "43595336236",
@@ -143,7 +176,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-10-29",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Taylor Wesley",
+      "dealType": "Upsell",
+      "description": ""
     },
     {
       "id": "53631753064",
@@ -155,7 +191,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Alex LeMieux",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58406346571",
@@ -167,7 +206,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "59186179994",
@@ -179,7 +221,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Alex LeMieux",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "49134465027",
@@ -191,7 +236,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-07",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "51339942328",
@@ -203,7 +251,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-02",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58406408516",
@@ -215,7 +266,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Tyler Rees",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "56239947136",
@@ -227,7 +281,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "amber chancy",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58406408251",
@@ -239,7 +296,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Sarah Nolen",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "59185241455",
@@ -251,7 +311,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Kellye Gardner",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "56608454732",
@@ -263,7 +326,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Alex LeMieux",
+      "dealType": "Upsell",
+      "description": ""
     },
     {
       "id": "48945589916",
@@ -275,7 +341,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-05",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "M W",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "53999235479",
@@ -287,7 +356,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-22",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Unassigned",
+      "dealType": "Upsell",
+      "description": ""
     },
     {
       "id": "58406657146",
@@ -299,7 +371,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 3
+      "contacts": 3,
+      "owner": "Tyler Rees",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "59186241646",
@@ -311,7 +386,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Alex LeMieux",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "54272609174",
@@ -323,7 +401,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Madison Pruitt",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "59186241392",
@@ -335,7 +416,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Sarah Nolen",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "53536952616",
@@ -347,7 +431,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58369020022",
@@ -359,7 +446,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-26",
-      "contacts": 4
+      "contacts": 4,
+      "owner": "Evan Hicks",
+      "dealType": "Upsell",
+      "description": ""
     },
     {
       "id": "58406408547",
@@ -371,7 +461,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Katherine Krajec",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "56913950542",
@@ -383,7 +476,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Katherine Krajec",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "41078961313",
@@ -395,7 +491,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-08-11",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58406223008",
@@ -407,7 +506,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "58406594816",
@@ -419,7 +521,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-26",
-      "contacts": 2
+      "contacts": 2,
+      "owner": "Evan Hicks",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "39085867958",
@@ -431,7 +536,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-07-08",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57623921592",
@@ -443,7 +551,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Alex LeMieux",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58406409507",
@@ -455,7 +566,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-30",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Evan Hicks",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "55412842271",
@@ -467,7 +581,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Madison Pruitt",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "59186303047",
@@ -479,7 +596,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Julia Berger",
+      "dealType": "Renewal",
+      "description": ""
     },
     {
       "id": "47890961789",
@@ -491,7 +611,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-07",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "33086897050",
@@ -503,7 +626,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "33575118482",
@@ -515,7 +641,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "34461065103",
@@ -527,7 +656,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "34534708286",
@@ -539,7 +671,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "34793424548",
@@ -551,7 +686,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "35109740166",
@@ -563,7 +701,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-03-27",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "35345429055",
@@ -575,7 +716,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "35407299512",
@@ -587,7 +731,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "40229676955",
@@ -599,7 +746,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-08-04",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "40317760178",
@@ -611,7 +761,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-07-16",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "40676779340",
@@ -623,7 +776,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-08-25",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "45327219813",
@@ -635,7 +791,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-11-24",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "48383319310",
@@ -647,7 +806,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2025-11-12",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "48440977163",
@@ -659,7 +821,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-07",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "50725270170",
@@ -671,7 +836,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-24",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "51682212637",
@@ -683,7 +851,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "53014686284",
@@ -695,7 +866,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-15",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "53092878667",
@@ -707,7 +881,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-11",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "53429813529",
@@ -719,7 +896,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-23",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "53700325480",
@@ -731,7 +911,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-09",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "54366367633",
@@ -743,7 +926,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-09",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "54394273896",
@@ -755,7 +941,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-28",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "54620724099",
@@ -767,7 +956,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-09",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "54949538955",
@@ -779,7 +971,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-01-28",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "55110222409",
@@ -791,7 +986,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-18",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "55380450899",
@@ -803,7 +1001,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-11",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "55478583878",
@@ -815,7 +1016,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-18",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Natalie Clauson",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "55481961521",
@@ -827,7 +1031,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-06",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "55629295511",
@@ -839,7 +1046,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "55675146034",
@@ -851,7 +1061,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-16",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "56025491482",
@@ -863,7 +1076,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-25",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Taylor Wesley",
+      "dealType": "Account Expansion",
+      "description": ""
     },
     {
       "id": "56134611810",
@@ -875,7 +1091,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-25",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "56357284955",
@@ -887,7 +1106,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-21",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "56399938363",
@@ -899,7 +1121,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-03",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "56481646479",
@@ -911,7 +1136,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-07",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "56611836455",
@@ -923,7 +1151,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-25",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Brooke MacLean",
+      "dealType": "newbusiness",
+      "description": ""
     },
     {
       "id": "57018549908",
@@ -935,7 +1166,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-17",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57018552487",
@@ -947,7 +1181,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-02-26",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57506904887",
@@ -959,7 +1196,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-24",
-      "contacts": 0
+      "contacts": 0,
+      "owner": "Haley Theisen",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57571752071",
@@ -971,7 +1211,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-05",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57810445624",
@@ -983,7 +1226,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-09",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57812794805",
@@ -995,7 +1241,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-09",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "57953325093",
@@ -1007,7 +1256,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-19",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58131463297",
@@ -1019,7 +1271,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-18",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58131796746",
@@ -1031,7 +1286,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-18",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58145004593",
@@ -1043,7 +1301,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-19",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58175554695",
@@ -1055,7 +1316,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58317636937",
@@ -1067,7 +1331,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-25",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58334613786",
@@ -1079,7 +1346,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-03-25",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58564671155",
@@ -1091,7 +1361,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58882712712",
@@ -1103,7 +1376,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58937782968",
@@ -1115,7 +1391,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-14",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58938601530",
@@ -1127,7 +1406,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58940174201",
@@ -1139,7 +1421,10 @@
       "close": null,
       "nextStep": "Send Gavin Inventory Questionnaire",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "58958026562",
@@ -1151,7 +1436,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "59034182300",
@@ -1163,7 +1451,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "59146775583",
@@ -1175,7 +1466,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-13",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "59174785089",
@@ -1187,7 +1481,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     },
     {
       "id": "59179358136",
@@ -1199,7 +1496,10 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-15",
-      "contacts": 1
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     }
   ],
   "meetings": [
