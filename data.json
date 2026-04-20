@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-20T20:41:33.070387+00:00",
+  "synced": "2026-04-20T20:47:00.646880+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -92,36 +92,6 @@
       "description": ""
     },
     {
-      "id": "54420957564",
-      "name": "Infinite Giving",
-      "amount": 72000.0,
-      "prob": 0.95,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-03-26",
-      "contacts": 2,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "55769677595",
-      "name": "Bespoke Capital Advisors of Raymond James",
-      "amount": 72000.0,
-      "prob": 0.95,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-03-04",
-      "contacts": 1,
-      "owner": "Natalie Clauson",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "57886709157",
       "name": "Signature Aviation - Decks",
       "amount": 67300.0,
@@ -133,7 +103,7 @@
       "lastAct": "2026-04-20",
       "contacts": 1,
       "owner": "Alex LeMieux",
-      "dealType": "",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -163,7 +133,7 @@
       "lastAct": "2026-04-20",
       "contacts": 1,
       "owner": "Alex LeMieux",
-      "dealType": "",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -194,21 +164,6 @@
       "contacts": 0,
       "owner": "Alex LeMieux",
       "dealType": "Renewal",
-      "description": ""
-    },
-    {
-      "id": "49134465027",
-      "name": "Solomon Brothers",
-      "amount": 47160.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-01-07",
-      "contacts": 0,
-      "owner": "Brooke MacLean",
-      "dealType": "",
       "description": ""
     },
     {

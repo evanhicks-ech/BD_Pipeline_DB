@@ -91,6 +91,7 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
 .p-sow{background:#CEFF5830;color:#3a6b00;}
 .type-badge{display:inline-block;padding:1px 5px;font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;margin-left:4px;}
 .tb-nb{background:#0038FF18;color:var(--mw-blue);}
+.tb-up{background:#f3e8ff;color:#7c3aed;}
 .tb-rn{background:#CEFF5830;color:#3a6b00;}
 .no-step{font-size:10px;color:var(--mw-muted-green);font-style:italic;}
 .overdue{color:var(--mw-orange) !important;font-weight:500;}
@@ -179,6 +180,7 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
       <a class="hs-link" style="font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;" href="https://app.hubspot.com/contacts/20433258/deals/list/view/all" target="_blank">View All in HubSpot →</a>
     </div>
     <div class="deals-section-gap" id="nbDealsWrap"></div>
+    <div class="deals-section-gap" id="upDealsWrap"></div>
     <div id="rnDealsWrap"></div>
   </div>
 
@@ -260,7 +262,13 @@ const fmtT = d => d ? new Date(d).toLocaleTimeString('en-US',{hour:'numeric',min
 const sinceD = d => !d ? 999 : Math.floor((Date.now()-new Date(d))/86400000);
 const untilD = d => !d ? 999 : Math.floor((new Date(d)-Date.now())/86400000);
 const stageLbl = id => STAGE_MAP[id]||id||'Unknown';
-const isRenewal = d => d.pipe===RN_PIPE || d.name.toLowerCase().includes('renewal');
+const isUpsell  = d => d.dealType==='Upsell' || d.dealType==='Account Expansion';
+const isRenewal = d => {
+  if(isUpsell(d)) return false;
+  if(d.dealType==='Renewal') return true;
+  return d.pipe===RN_PIPE || d.name.toLowerCase().includes('renewal');
+};
+const isNewBiz  = d => !isUpsell(d) && !isRenewal(d);
 
 function pillCls(l){
   if(l.includes('Lead')||l.includes('Hold')) return 'p-lead';
@@ -272,36 +280,35 @@ function pillCls(l){
 
 // ─── RENDER: SUMMARY BAR ─────────────────────────
 function renderSummary(){
+  const nb       = DEALS.filter(isNewBiz);
+  const upsells  = DEALS.filter(isUpsell);
   const renewals = DEALS.filter(isRenewal);
-  const newbiz   = DEALS.filter(d=>!isRenewal(d));
-  const nbVal    = newbiz.reduce((s,d)=>s+d.amount,0);
+  const nbVal    = nb.reduce((s,d)=>s+d.amount,0);
+  const upVal    = upsells.reduce((s,d)=>s+d.amount,0);
   const rnVal    = renewals.reduce((s,d)=>s+d.amount,0);
-  const total    = nbVal+rnVal;
+  const total    = nbVal+upVal+rnVal;
   const weighted = DEALS.reduce((s,d)=>s+(d.amount*d.prob),0);
-  const nbPct    = total>0 ? Math.round(nbVal/total*100) : 0;
 
   document.getElementById('summaryBar').innerHTML=`
     <div class="sum-card s-nb">
       <div class="sum-label">New Business</div>
       <div class="sum-value">${fmt(nbVal)}</div>
-      <div class="sum-sub">${newbiz.length} deals</div>
-      <div class="split-bar"><div class="split-fill" style="width:${nbPct}%;background:var(--mw-blue)"></div></div>
+      <div class="sum-sub">${nb.length} deals</div>
+    </div>
+    <div class="sum-card" style="border-color:#a78bfa">
+      <div class="sum-label">Upsell</div>
+      <div class="sum-value" style="color:#7c3aed">${fmt(upVal)}</div>
+      <div class="sum-sub">${upsells.length} deals</div>
     </div>
     <div class="sum-card s-rn">
       <div class="sum-label">Renewals</div>
       <div class="sum-value">${fmt(rnVal)}</div>
       <div class="sum-sub">${renewals.length} deals</div>
-      <div class="split-bar"><div class="split-fill" style="width:${100-nbPct}%;background:var(--mw-neon-green)"></div></div>
     </div>
     <div class="sum-card s-wt">
       <div class="sum-label">Weighted Value</div>
       <div class="sum-value">${fmt(weighted)}</div>
       <div class="sum-sub">probability-adjusted</div>
-    </div>
-    <div class="sum-card">
-      <div class="sum-label">NB vs Renewal Split</div>
-      <div class="sum-value" style="font-size:22px">${nbPct}% <span style="font-size:14px;opacity:.5">/</span> ${100-nbPct}%</div>
-      <div class="sum-sub">new biz share of total</div>
     </div>
     <div class="sum-card s-total">
       <div class="sum-label">Total Pipeline</div>
@@ -424,10 +431,9 @@ function buildDealTable(deals, wrapperId, title){
 }
 
 function renderOpps(){
-  const nb=DEALS.filter(d=>!isRenewal(d));
-  const rn=DEALS.filter(isRenewal);
-  buildDealTable(nb,'nbDealsWrap','New Business');
-  buildDealTable(rn,'rnDealsWrap','Renewals');
+  buildDealTable(DEALS.filter(isNewBiz), 'nbDealsWrap', 'New Business');
+  buildDealTable(DEALS.filter(isUpsell),  'upDealsWrap', 'Upsell');
+  buildDealTable(DEALS.filter(isRenewal), 'rnDealsWrap', 'Renewals');
 }
 
 // ─── RENDER: KEY DATES ───────────────────────────
@@ -496,20 +502,22 @@ function renderAnalysis(syncTime){
   const total=DEALS.reduce((s,d)=>s+d.amount,0);
   const weighted=DEALS.reduce((s,d)=>s+(d.amount*d.prob),0);
   const renewals=DEALS.filter(isRenewal);
-  const newbiz=DEALS.filter(d=>!isRenewal(d));
+  const upsells=DEALS.filter(isUpsell);
+  const nb=DEALS.filter(isNewBiz);
   const rnVal=renewals.reduce((s,d)=>s+d.amount,0);
+  const upVal=upsells.reduce((s,d)=>s+d.amount,0);
   const gap=total-weighted;
-  const noActivity=DEALS.filter(d=>!d.lastAct&&!stageLbl(d.stageId).includes('Lead'));
   const overdue=DEALS.filter(d=>d.close&&untilD(d.close)<0);
   const noNext=DEALS.filter(d=>!d.nextStep&&!stageLbl(d.stageId).includes('Lead'));
   const topDeal=DEALS.slice().sort((a,b)=>b.amount*b.prob-a.amount*a.prob)[0];
 
   const lines=[];
-  lines.push(`Your raw pipeline is ${fmt(total)}, with a probability-weighted value of ${fmt(weighted)} — a ${fmt(gap)} gap.`);
+  lines.push(`Your raw pipeline is ${fmt(total)} across ${nb.length} new business, ${upsells.length} upsell, and ${renewals.length} renewal deals. Probability-weighted value is ${fmt(weighted)}.`);
   if(topDeal) lines.push(`${topDeal.name} (${fmt(topDeal.amount)}, ${Math.round(topDeal.prob*100)}% probability) is your highest-weighted deal — keep momentum here.`);
   if(overdue.length) lines.push(`${overdue.length} deal${overdue.length>1?'s are':' is'} past close date: ${overdue.map(d=>d.name).join(', ')}. Update in HubSpot immediately.`);
   if(noNext.length) lines.push(`${noNext.length} active deal${noNext.length>1?'s have':' has'} no next step logged — these are at risk of stalling.`);
-  if(renewals.length) lines.push(`Renewals represent ${fmt(rnVal)} across ${renewals.length} deals. Most are in Lead stage with no active engagement — start outreach now.`);
+  if(upsells.length) lines.push(`Upsell pipeline is ${fmt(upVal)} across ${upsells.length} deals — these are warm accounts and should close faster than net new.`);
+  if(renewals.length) lines.push(`Renewals represent ${fmt(rnVal)} across ${renewals.length} deals. Proactive outreach needed before close dates arrive.`);
   const meta=syncTime?`Synced ${syncTime} · Auto-refreshes hourly from HubSpot`:'Live data unavailable — showing cached snapshot';
   document.getElementById('aiText').innerHTML=`<span class="ai-meta">${meta}</span>${lines.join(' ')}`;
 }
