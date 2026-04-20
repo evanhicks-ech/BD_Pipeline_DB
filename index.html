@@ -101,6 +101,14 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
 .deals-top-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
 .expand-icon{font-size:9px;color:var(--mw-muted-green);margin-left:6px;transition:transform .2s;}
 .deal-row.open .expand-icon{transform:rotate(90deg);}
+/* CLOSED LOST */
+.cl-table{width:100%;border-collapse:collapse;}
+.cl-table th{padding:7px 14px;text-align:left;font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);background:var(--mw-off-white);border-bottom:1px solid var(--mw-beige);}
+.cl-table td{padding:9px 14px;border-bottom:1px solid var(--mw-beige);vertical-align:middle;font-size:11px;}
+.cl-table tbody tr:hover{background:var(--mw-off-white);}
+.cl-amount{font-family:var(--font-display);font-size:13px;font-weight:200;}
+.cl-date{font-size:9px;color:var(--mw-muted-green);}
+.cl-reason{font-size:10px;color:#777;font-style:italic;}
 
 /* KEY DATES */
 .date-item{padding:12px 18px;border-bottom:1px solid var(--mw-beige);display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:12px;}
@@ -184,9 +192,20 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
     <div id="rnDealsWrap"></div>
   </div>
 
+  <div>
+    <div class="section-label">04 — Closed Lost <span style="font-weight:300;opacity:.6">(last 90 days)</span></div>
+    <div class="card">
+      <div class="card-header" style="border-left:3px solid var(--mw-orange)">
+        <span class="card-title">Lost Deals</span>
+        <span class="card-sub" id="closedLostCount"></span>
+      </div>
+      <div style="overflow-x:auto" id="closedLostWrap"></div>
+    </div>
+  </div>
+
   <div class="two-col">
     <div>
-      <div class="section-label">04 — Key Dates</div>
+      <div class="section-label">05 — Key Dates</div>
       <div class="card">
         <div class="card-header"><span class="card-title">Close Dates & Deadlines</span></div>
         <div id="keyDates"></div>
@@ -196,14 +215,14 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
 
   <div class="two-col">
     <div>
-      <div class="section-label">05 — Roadblocks</div>
+      <div class="section-label">06 — Roadblocks</div>
       <div class="card">
         <div class="card-header"><span class="card-title">Blockers & Risks</span></div>
         <div id="roadblocks"></div>
       </div>
     </div>
     <div>
-      <div class="section-label">06 — Meeting Activity</div>
+      <div class="section-label">07 — Meeting Activity</div>
       <div class="card">
         <div class="card-header"><span class="card-title">Recent BD Meetings</span></div>
         <div id="meetingsList"></div>
@@ -249,6 +268,7 @@ const STAGE_MAP = {
 
 // ─── DATA (populated at runtime from data.json) ───
 let DEALS = [];
+let CLOSED_LOST = [];
 let MEETINGS = [];
 
 // ─── HELPERS ─────────────────────────────────────
@@ -474,6 +494,40 @@ function renderRoadblocks(){
     </div>`).join('');
 }
 
+// ─── RENDER: CLOSED LOST ─────────────────────────
+function renderClosedLost(){
+  const NB_CL='caa876d5-e7c0-467b-9456-ec136d6f83f1';
+  const RN_CL='74889ee1-e828-43e0-a467-5e2916da3932';
+  if(!CLOSED_LOST.length){
+    document.getElementById('closedLostCount').textContent='None in last 90 days';
+    document.getElementById('closedLostWrap').innerHTML='<div class="empty">No closed lost deals in the last 90 days</div>';
+    return;
+  }
+  const totalLost=CLOSED_LOST.reduce((s,d)=>s+d.amount,0);
+  document.getElementById('closedLostCount').textContent=`${CLOSED_LOST.length} deals · ${fmt(totalLost)} lost`;
+
+  const typeLabel = d => {
+    if(d.dealType==='Upsell'||d.dealType==='Account Expansion') return '<span class="type-badge tb-up">Upsell</span>';
+    if(d.dealType==='Renewal') return '<span class="type-badge tb-rn">Renewal</span>';
+    if(d.pipe===RN_PIPE) return '<span class="type-badge tb-rn">Renewal</span>';
+    return '<span class="type-badge tb-nb">New Biz</span>';
+  };
+
+  document.getElementById('closedLostWrap').innerHTML=`
+    <table class="cl-table">
+      <thead><tr><th>Deal</th><th>Type</th><th>Value</th><th>Owner</th><th>Date Lost</th></tr></thead>
+      <tbody>${CLOSED_LOST.map(d=>`
+        <tr>
+          <td><a class="hs-link" href="https://app.hubspot.com/contacts/20433258/record/0-3/${d.id}" target="_blank">${d.name}</a></td>
+          <td>${typeLabel(d)}</td>
+          <td><span class="cl-amount">${fmt(d.amount)}</span></td>
+          <td class="opp-owner">${d.owner}</td>
+          <td><span class="cl-date">${d.close?fmtD(d.close):'—'}</span></td>
+        </tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
 // ─── RENDER: MEETINGS ────────────────────────────
 function renderMeetings(){
   const today=new Date().toDateString();
@@ -534,6 +588,7 @@ function renderAnalysis(syncTime){
     if(!resp.ok) throw new Error('not found');
     const data=await resp.json();
     DEALS=data.deals||[];
+    CLOSED_LOST=data.closedLost||[];
     MEETINGS=data.meetings||[];
     syncTime=new Date(data.synced).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
     document.getElementById('syncNote').textContent='Live data · Last synced '+syncTime;
@@ -545,6 +600,7 @@ function renderAnalysis(syncTime){
   renderStages();
   renderOpps();
   renderDates();
+  renderClosedLost();
   renderRoadblocks();
   renderMeetings();
   renderAnalysis(syncTime);

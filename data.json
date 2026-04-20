@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-20T20:47:00.646880+00:00",
+  "synced": "2026-04-20T20:52:37.608330+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -145,9 +145,9 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-03-26",
+      "lastAct": "2026-04-20",
       "contacts": 1,
-      "owner": "Evan Hicks",
+      "owner": "Alex LeMieux",
       "dealType": "Renewal",
       "description": ""
     },
@@ -900,6 +900,248 @@
       "owner": "Brooke MacLean",
       "dealType": "Upsell",
       "description": ""
+    }
+  ],
+  "closedLost": [
+    {
+      "id": "49134465027",
+      "name": "Solomon Brothers",
+      "amount": 47160.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-20",
+      "owner": "Brooke MacLean",
+      "lostReason": ""
+    },
+    {
+      "id": "55769677595",
+      "name": "Bespoke Capital Advisors of Raymond James",
+      "amount": 72000.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-20",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "54420957564",
+      "name": "Infinite Giving",
+      "amount": 72000.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-20",
+      "owner": "Brooke MacLean",
+      "lostReason": ""
+    },
+    {
+      "id": "43264128289",
+      "name": "Cutting Edge - Change Order (2026)",
+      "amount": 117000.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-20",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "54829708939",
+      "name": "CDI USA, Inc.",
+      "amount": 309050.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-20",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "58563883333",
+      "name": "Love Is Art",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "newbusiness",
+      "close": "2026-04-15",
+      "owner": "Brooke MacLean",
+      "lostReason": ""
+    },
+    {
+      "id": "58406285352",
+      "name": "SOLTECH - Renewal",
+      "amount": 10311.0,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "dealType": "Renewal",
+      "close": "2026-04-15",
+      "owner": "Sarah Nolen",
+      "lostReason": ""
+    },
+    {
+      "id": "58641885095",
+      "name": "cainlex",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-02",
+      "owner": "Brooke MacLean",
+      "lostReason": ""
+    },
+    {
+      "id": "57865520515",
+      "name": "Sylvan - GMB Management",
+      "amount": 18902.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-01",
+      "owner": "Alex LeMieux",
+      "lostReason": "Cost/Budget"
+    },
+    {
+      "id": "57961460334",
+      "name": "5Q - Podcast Art",
+      "amount": 3450.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-01",
+      "owner": "Taylor Wesley",
+      "lostReason": "Cost/Budget"
+    },
+    {
+      "id": "58474886215",
+      "name": "CDI World - RFP",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "newbusiness",
+      "close": "2026-04-01",
+      "owner": "Evan Hicks",
+      "lostReason": ""
+    },
+    {
+      "id": "57506390312",
+      "name": "CUCU - Social Media Retainer",
+      "amount": 71100.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-03-30",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "57619603970",
+      "name": "Impact Analytics - 30 Dev Hours",
+      "amount": 10125.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-03-24",
+      "owner": "Julia Berger",
+      "lostReason": "Cost/Budget"
+    },
+    {
+      "id": "48886894247",
+      "name": "Sayers - Dev Bucket",
+      "amount": 3150.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-03-18",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "49138865255",
+      "name": "Primero Games",
+      "amount": 303250.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-03-09",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "49913719048",
+      "name": "Signature Aviation - Pendo Implementation",
+      "amount": 40888.75,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-03-04",
+      "owner": "Alex LeMieux",
+      "lostReason": "No longer needed"
+    },
+    {
+      "id": "56735664947",
+      "name": "PrologMobile",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "newbusiness",
+      "close": "2026-03-02",
+      "owner": "Natalie Clauson",
+      "lostReason": "Cost/Budget"
+    },
+    {
+      "id": "54326538595",
+      "name": "Signature Aviation - Campaign Tracking",
+      "amount": 2700.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-02-20",
+      "owner": "Alex LeMieux",
+      "lostReason": "No longer needed"
+    },
+    {
+      "id": "55922555041",
+      "name": "AEY Roofing",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-02-13",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "53995959182",
+      "name": "Nichols Cauley",
+      "amount": 226750.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-02-12",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "54615861368",
+      "name": "CUCU - Upsell",
+      "amount": 4000.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-01-28",
+      "owner": "Taylor Wesley",
+      "lostReason": "No longer needed"
+    },
+    {
+      "id": "48943051535",
+      "name": "TapMango - Website/Brand Refresh",
+      "amount": 76000.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-01-22",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "48945850234",
+      "name": "TapMango - Retainer Change Order",
+      "amount": 296410.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-01-22",
+      "owner": "Brooke MacLean",
+      "lostReason": "No longer needed"
+    },
+    {
+      "id": "53879117423",
+      "name": "Grand Homes and Gardens, LLC.",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-01-21",
+      "owner": "Natalie Clauson",
+      "lostReason": "Cost/Budget"
     }
   ],
   "meetings": [

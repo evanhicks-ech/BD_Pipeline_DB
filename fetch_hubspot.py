@@ -74,6 +74,42 @@ def fetch_deals():
         })
     return deals
 
+def fetch_closed_lost():
+    cutoff = int((datetime.now(timezone.utc) - timedelta(days=90)).timestamp() * 1000)
+    owner_map = fetch_owner_map()
+    resp = requests.post(
+        'https://api.hubapi.com/crm/v3/objects/deals/search',
+        headers=HEADERS,
+        json={
+            'filterGroups': [{'filters': [
+                {'propertyName': 'dealstage', 'operator': 'IN', 'values': [
+                    'caa876d5-e7c0-467b-9456-ec136d6f83f1',  # NB closed lost
+                    '74889ee1-e828-43e0-a467-5e2916da3932',  # RN closed lost
+                ]},
+                {'propertyName': 'closedate', 'operator': 'GTE', 'value': str(cutoff)},
+            ]}],
+            'properties': ['dealname', 'amount', 'pipeline', 'dealtype', 'closedate', 'hubspot_owner_id', 'closed_lost_reason'],
+            'sorts': [{'propertyName': 'closedate', 'direction': 'DESCENDING'}],
+            'limit': 100,
+        }
+    )
+    resp.raise_for_status()
+    deals = []
+    for r in resp.json().get('results', []):
+        p = r['properties']
+        owner_id = str(p.get('hubspot_owner_id') or '')
+        deals.append({
+            'id': r['id'],
+            'name': p.get('dealname', ''),
+            'amount': float(p.get('amount') or 0),
+            'pipe': p.get('pipeline', ''),
+            'dealType': p.get('dealtype') or '',
+            'close': p.get('closedate', '')[:10] if p.get('closedate') else None,
+            'owner': owner_map.get(owner_id, 'Unassigned'),
+            'lostReason': p.get('closed_lost_reason') or '',
+        })
+    return deals
+
 def fetch_meetings():
     cutoff = int((datetime.now(timezone.utc) - timedelta(days=30)).timestamp() * 1000)
     resp = requests.post(
@@ -106,6 +142,14 @@ def main():
     deals = fetch_deals()
     print(f'  {len(deals)} deals')
 
+    print('Fetching closed lost...')
+    try:
+        closed_lost = fetch_closed_lost()
+        print(f'  {len(closed_lost)} closed lost (last 90 days)')
+    except Exception as e:
+        print(f'  Closed lost unavailable: {e}')
+        closed_lost = []
+
     print('Fetching meetings...')
     try:
         meetings = fetch_meetings()
@@ -117,6 +161,7 @@ def main():
     output = {
         'synced': datetime.now(timezone.utc).isoformat(),
         'deals': deals,
+        'closedLost': closed_lost,
         'meetings': meetings,
     }
     with open('data.json', 'w') as f:
