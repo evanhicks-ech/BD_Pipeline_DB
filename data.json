@@ -1,0 +1,1498 @@
+{
+  "synced": "2026-04-20T19:59:32.002473+00:00",
+  "deals": [
+    {
+      "id": "54829708939",
+      "name": "CDI USA, Inc.",
+      "amount": 309050.0,
+      "prob": 0.95,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58332124842",
+      "name": "Elevate Aviation Group, LLC - RFP",
+      "amount": 255000.0,
+      "prob": 0.95,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
+      "close": null,
+      "nextStep": "F/U w/ Rawan",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57352056164",
+      "name": "Sayers - Performance Marketing",
+      "amount": 195000.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56893201818",
+      "name": "Krevolin & Horst, LLC",
+      "amount": 157800.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58369079064",
+      "name": "ezCater - RFP",
+      "amount": 120000.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
+      "close": null,
+      "nextStep": "RFI Questions due 4/9",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "43264128289",
+      "name": "Cutting Edge - Change Order (2026)",
+      "amount": 117000.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "58167953966",
+      "name": "The Bunkr Golf Co",
+      "amount": 96000.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58295581111",
+      "name": "E3Tech - Website Redesign + Brand Strategy",
+      "amount": 92000.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
+      "close": null,
+      "nextStep": "Schedule follow-up call for Kristen to bring on other E3Tech stakeholders",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "54420957564",
+      "name": "Infinite Giving",
+      "amount": 72000.0,
+      "prob": 0.95,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 2
+    },
+    {
+      "id": "55769677595",
+      "name": "Bespoke Capital Advisors of Raymond James",
+      "amount": 72000.0,
+      "prob": 0.95,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57886709157",
+      "name": "Signature Aviation - Decks",
+      "amount": 67300.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "43595336236",
+      "name": "Phosphorus - Website",
+      "amount": 67135.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "53631753064",
+      "name": "Signature Aviation - Video & Campaign Upsell",
+      "amount": 65200.0,
+      "prob": 0.95,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58406346571",
+      "name": "Maven - Renewal",
+      "amount": 57278.61,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59186179994",
+      "name": "Signature Aviation - Renewal",
+      "amount": 49916.19,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "49134465027",
+      "name": "Solomon Brothers",
+      "amount": 47160.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "51339942328",
+      "name": "Sylvan - ECommerce Site - March",
+      "amount": 42150.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "58406408516",
+      "name": "Yamaha - Renewal",
+      "amount": 39375.0,
+      "prob": 0.35,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "stageId": "d099e80a-b312-4893-b71f-a197a206f3f2",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56239947136",
+      "name": "5Q - New Service Line",
+      "amount": 28250.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58406408251",
+      "name": "Phosphorus - Renewal",
+      "amount": 28200.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59185241455",
+      "name": "Machete - Renewal",
+      "amount": 26858.85,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "56608454732",
+      "name": "Firmspace - Video/Photo",
+      "amount": 26150.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "48945589916",
+      "name": "Furman",
+      "amount": 24350.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "53999235479",
+      "name": "Discovery Dunwoody - SMS",
+      "amount": 22200.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58406657146",
+      "name": "Yakima Valley Hops - Renewal",
+      "amount": 20989.5,
+      "prob": 0.35,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "stageId": "d099e80a-b312-4893-b71f-a197a206f3f2",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 3
+    },
+    {
+      "id": "59186241646",
+      "name": "Crunchafi - Renewal",
+      "amount": 17419.5,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "54272609174",
+      "name": "STAT Wellness - New Location Plan",
+      "amount": 15750.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59186241392",
+      "name": "Evident - Renewal",
+      "amount": 15067.5,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "53536952616",
+      "name": "United Bank - Mailchimp Opp",
+      "amount": 12350.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58369020022",
+      "name": "Tackle - Video + Design",
+      "amount": 11050.0,
+      "prob": 0.2,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "stageId": "942502151",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 4
+    },
+    {
+      "id": "58406408547",
+      "name": "Discover Dunwoody - Renewal",
+      "amount": 9623.25,
+      "prob": 0.35,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "stageId": "d099e80a-b312-4893-b71f-a197a206f3f2",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56913950542",
+      "name": "Braze - Schema Audit",
+      "amount": 8750.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "41078961313",
+      "name": "Machete - CRO Audit & Analysis - Q2 2026",
+      "amount": 8250.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "58406223008",
+      "name": "FairPlay AI - Renewal",
+      "amount": 8169.0,
+      "prob": 0.2,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "stageId": "942502151",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58406594816",
+      "name": "Iris - Renewal",
+      "amount": 6699.0,
+      "prob": 0.2,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "stageId": "942502151",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 2
+    },
+    {
+      "id": "39085867958",
+      "name": "Evident - Collateral (Q4)",
+      "amount": 6500.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57623921592",
+      "name": "Sylvan - Office Art",
+      "amount": 5150.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58406409507",
+      "name": "North Point Ministries - Renewal",
+      "amount": 4725.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "55412842271",
+      "name": "BIP Wealth - Video Upsell",
+      "amount": 4500.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59186303047",
+      "name": "Infinity Transportation - Renewal",
+      "amount": 4362.01,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "47890961789",
+      "name": "STAT Wellness - Video Upsell",
+      "amount": 3500.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "33086897050",
+      "name": "Trusted Virtual Team",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "33575118482",
+      "name": "MyLeadsHero.com",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "34461065103",
+      "name": "Build your WP Sites",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "34534708286",
+      "name": "Ultimate VA assist",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "34793424548",
+      "name": "Digtal Comets",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "35109740166",
+      "name": "VAs4HIRE",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "35345429055",
+      "name": "Freelancer",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "35407299512",
+      "name": "VAs4HIRE",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "40229676955",
+      "name": "Relato/Baylor",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "40317760178",
+      "name": "Cutting Edge Firewood - Merch",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "40676779340",
+      "name": "STAT Wellness",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "45327219813",
+      "name": "Alta - Summer 2026",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1090940083",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "48383319310",
+      "name": "IDEO",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "48440977163",
+      "name": "ONEtechnology (+ more)",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "50725270170",
+      "name": "momseo",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "51682212637",
+      "name": "IDEO",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "53014686284",
+      "name": "The Physical AI Summit",
+      "amount": 0.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "53092878667",
+      "name": "Engineer My Career",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "53429813529",
+      "name": "Queen One",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "53700325480",
+      "name": "Orange Outreach",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "54366367633",
+      "name": "Gomal Themes",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "54394273896",
+      "name": "Brigadeb2b.com",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "54620724099",
+      "name": "Orange Outreach",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "54949538955",
+      "name": "B2B Email List",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "55110222409",
+      "name": "SkyBridge IT Consulting",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "55380450899",
+      "name": "Transwestern",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "55478583878",
+      "name": "Atlas Cloud - Mailchimp Referral",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "55481961521",
+      "name": "Orange Outreach",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "55629295511",
+      "name": "MAXIFY",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "55675146034",
+      "name": "Smartblasts",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56025491482",
+      "name": "T.Lake - Performance Marketing",
+      "amount": 0.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56134611810",
+      "name": "Web Designer",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56357284955",
+      "name": "Heybassh",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56399938363",
+      "name": "Remote SEO",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56481646479",
+      "name": "Link Building Portal",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "56611836455",
+      "name": "Tour24 - Website",
+      "amount": 0.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "57018549908",
+      "name": "50Pros",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57018552487",
+      "name": "Syrup Marketing",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57506904887",
+      "name": "Fargo Jet Center - Hubspot Build",
+      "amount": 0.0,
+      "prob": 0.9,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 0
+    },
+    {
+      "id": "57571752071",
+      "name": "Addax Lab",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57810445624",
+      "name": "Orange Outreach",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57812794805",
+      "name": "Orange Outreach",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "57953325093",
+      "name": "Manic SEO",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58131463297",
+      "name": "GoCreators / Hello, Marketwake team,  My name is Laura and I\u2019ve been following Marketwake for a while and see strong potential for us to collaborate.  At GoCreators we support performance marketing agencies like yours with UGC videos for paid media of their clients. We are working with Allformance, OHM, etc. Here is the presentation with some of our examples in different regions:  https://docs.google.com/presentation/d/1_RRPfmhmska_PA20xtORLh7rgCbd3Sj4W3bZLRV_Ho8/edit?usp=sharing  Could this be relevant? I'd be happy to have a short call to figure out how we can collaborate!",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58131796746",
+      "name": "GoCreators",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58145004593",
+      "name": "Quantum Growth X",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58175554695",
+      "name": "Tackle - Performance Marketing",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58317636937",
+      "name": "Web Designer",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58334613786",
+      "name": "AMC Mosquito Control",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58564671155",
+      "name": "Crunchafi - Performance Marketing",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58882712712",
+      "name": "Evident - CRM Management",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58937782968",
+      "name": "Koyal Technologies LLP",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58938601530",
+      "name": "DCA Live - Brand Strategy",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58940174201",
+      "name": "TADA! Industries -",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "Send Gavin Inventory Questionnaire",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "58958026562",
+      "name": "DCA Live - Brand Strategy",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59034182300",
+      "name": "Verder Group",
+      "amount": 0.0,
+      "prob": 0.1,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "1269283354",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59146775583",
+      "name": "BPO Innovations",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59174785089",
+      "name": "Optin Prospects",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    },
+    {
+      "id": "59179358136",
+      "name": "Meridian GRC",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": null,
+      "contacts": 1
+    }
+  ],
+  "tasks": [
+    {
+      "id": "34616396669",
+      "subject": "Follow Up",
+      "due": null,
+      "body": ""
+    },
+    {
+      "id": "38194676049",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Ross Lian Thornton and Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "38346046728",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help you HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "40201986903",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Sam Betar and Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "40206056237",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Shaina Lupo and Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "44583403689",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Gina Bernstein and Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "44583438206",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help you HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "47338310214",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Emma Spector and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "49152155146",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Brison Moorhead and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "51193593732",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Nicholas Franklin and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "53606728469",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Katherine Sanders and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "56303576497",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Megan McLean and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "59059379982",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Nicholas Franklin and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "63185479049",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Keil Schneider and Alex Desnoyers to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "63194904753",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Ben Weitzel and Alex Desnoyers to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "63438756448",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Alex Desnoyers to align on an approach for this deal. Here are some things to discuss to help you HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "67394770558",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Paige Maslar and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "67843168641",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Aronah Mukhtar and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "71500034987",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Zachary Roever and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "78965179466",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Nicolas Camargo and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "80955738513",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Matt Byer and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "80955758380",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Megan McLean and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "84192545156",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Connor Belzowski and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "84192568167",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Meri Louko and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "84192586877",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Charlene Huynh and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "92501380503",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Megan McLean and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "92926270091",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help you HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "96838611742",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Socratis Mamalis and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "98910881450",
+      "subject": "Set up first strategy call",
+      "due": null,
+      "body": "<p>Set up a first strategy call with Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help you HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
+    },
+    {
+      "id": "106978467962",
+      "subject": "Follow up on ezCater - RFP",
+      "due": null,
+      "body": "Regarding note logged on Thursday, March 26, 2026 12:31 PM"
+    },
+    {
+      "id": "107402954593",
+      "subject": "Follow up on E3Tech - Website Redesign + Brand Strategy",
+      "due": null,
+      "body": "Regarding note logged on Thursday, April 2, 2026 2:41 PM"
+    },
+    {
+      "id": "107404670273",
+      "subject": "F/U w/ Kevin Norcross on LI",
+      "due": null,
+      "body": ""
+    },
+    {
+      "id": "107610599328",
+      "subject": "E3Tech Follow-up",
+      "due": null,
+      "body": ""
+    }
+  ],
+  "meetings": [
+    {
+      "id": "108184293801",
+      "title": "The \"Crazy Curious\" Crew",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "108086106995",
+      "title": "Mailchimp & Marketwake",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "108201556317",
+      "title": "Evan () and Amanda Donnelly | TechCXO Intro 1:1",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "107729966700",
+      "title": "Tuning BD engines on the \"small boat\"",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "107838855543",
+      "title": "Marketwake + TADA!: Intro Call",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "107201362821",
+      "title": "Coffee Evan / Mike",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "106981705748",
+      "title": "Untitled Meeting",
+      "start": null,
+      "end": null,
+      "outcome": "SCHEDULED"
+    },
+    {
+      "id": "107318005006",
+      "title": "City Lifestyle / Marketwake",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "107185693315",
+      "title": "Evan <> Jeremy: Marketwake Intro Call",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "106867767404",
+      "title": "Bunkr Golf x Marketwake | Growth Strategy Session",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "106981283202",
+      "title": "Untitled Meeting",
+      "start": null,
+      "end": null,
+      "outcome": "SCHEDULED"
+    },
+    {
+      "id": "106981282340",
+      "title": "Untitled Meeting",
+      "start": null,
+      "end": null,
+      "outcome": "COMPLETED"
+    },
+    {
+      "id": "106870555662",
+      "title": "Untitled Meeting",
+      "start": null,
+      "end": null,
+      "outcome": null
+    }
+  ]
+}

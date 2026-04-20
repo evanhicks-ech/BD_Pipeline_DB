@@ -251,39 +251,10 @@ const STAGE_MAP = {
   'a3f0d835-433c-498b-b6e8-2e56ecedada8':'Negotiation',
 };
 
-// ─── LIVE DATA — synced Apr 3, 2026 ──────────────
-const DEALS = [
-  {id:'58332124842',name:'Elevate Aviation Group - RFP',amount:255000,prob:0.95,pipe:NB_PIPE,stageId:'9d861ce8-c36c-40c2-b0c4-ec76a096cb1e',close:'2026-04-30',nextStep:'',lastAct:null,contacts:1},
-  {id:'58295581111',name:'E3Tech - Website Redesign + Brand Strategy',amount:92000,prob:0.35,pipe:NB_PIPE,stageId:'26b63b8f-a58d-4421-bcad-0273a00326db',close:'2026-05-31',nextStep:'Schedule follow-up call for Kristen to bring on other E3Tech stakeholders',lastAct:'2026-04-02',contacts:1},
-  {id:'58406469758',name:'Advantive - Brand Identity + Rollout',amount:77895,prob:0.35,pipe:NB_PIPE,stageId:'270cf2bd-d2bc-4047-bf7b-c5e94032c0be',close:'2026-03-31',nextStep:'',lastAct:null,contacts:1},
-  {id:'58406346571',name:'Maven - Renewal',amount:57278,prob:0.20,pipe:NB_PIPE,stageId:'267918443',close:'2027-03-01',nextStep:'',lastAct:null,contacts:1},
-  {id:'58406408516',name:'Yamaha - Renewal',amount:39375,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-01',nextStep:'',lastAct:null,contacts:1},
-  {id:'58406408251',name:'Phosphorus - Renewal',amount:23835,prob:0.35,pipe:RN_PIPE,stageId:'d099e80a-b312-4893-b71f-a197a206f3f2',close:'2026-03-31',nextStep:'',lastAct:'2026-03-30',contacts:1},
-  {id:'58406657146',name:'Yakima Valley Hops - Renewal',amount:20990,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-06-30',nextStep:'',lastAct:null,contacts:3},
-  {id:'58369020022',name:'Tackle - Video + Design',amount:11050,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-04-30',nextStep:'',lastAct:'2026-03-26',contacts:4},
-  {id:'58406285352',name:'SOLTECH - Renewal',amount:10311,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-11',nextStep:'',lastAct:null,contacts:3},
-  {id:'58406408547',name:'Discover Dunwoody - Renewal',amount:9623,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-30',nextStep:'',lastAct:null,contacts:1},
-  {id:'58406223008',name:'FairPlay AI - Renewal',amount:8169,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-12',nextStep:'',lastAct:null,contacts:1},
-  {id:'58406594816',name:'Iris - Renewal',amount:6699,prob:0.20,pipe:RN_PIPE,stageId:'942502151',close:'2026-05-01',nextStep:'',lastAct:null,contacts:2},
-  {id:'58406409507',name:'North Point Ministries - Renewal',amount:4725,prob:0.20,pipe:NB_PIPE,stageId:'267918443',close:'2026-06-01',nextStep:'',lastAct:null,contacts:0},
-  {id:'58167953966',name:'The Bunkr Golf Co',amount:0,prob:0.35,pipe:NB_PIPE,stageId:'26b63b8f-a58d-4421-bcad-0273a00326db',close:'2026-04-18',nextStep:'Schedule in-person discovery meeting at MW office',lastAct:'2026-04-02',contacts:1},
-  {id:'58369079064',name:'ezCater - RFP',amount:0,prob:0.20,pipe:NB_PIPE,stageId:'267918443',close:'2026-06-30',nextStep:'',lastAct:'2026-03-31',contacts:1},
-];
-
-const TASKS = [
-  {id:'106978467962',subject:'Follow up on ezCater - RFP',due:null,body:'Logged Mar 26'},
-  {id:'107402954593',subject:'Follow up on E3Tech - Website Redesign + Brand Strategy',due:null,body:'Logged Apr 2'},
-  {id:'107404670273',subject:'F/U w/ Kevin Norcross on LI',due:null,body:''},
-];
-
-const MEETINGS = [
-  {id:'107201362821',title:'Coffee Evan / Mike',start:'2026-04-03T12:30:00Z',end:'2026-04-03T13:30:00Z',outcome:null},
-  {id:'107185693315',title:'Evan <> Jeremy: Marketwake Intro Call',start:'2026-04-01T13:30:00Z',end:'2026-04-01T14:00:00Z',outcome:null},
-  {id:'106867767404',title:'Bunkr Golf x Marketwake | Growth Strategy Session',start:'2026-03-31T19:30:00Z',end:'2026-03-31T20:30:00Z',outcome:null},
-  {id:'106981705748',title:'Untitled Meeting',start:'2026-04-01T17:30:00Z',end:'2026-04-01T18:15:00Z',outcome:'SCHEDULED'},
-  {id:'106981282340',title:'Discovery Call',start:'2026-03-24T14:45:00Z',end:'2026-03-24T15:15:00Z',outcome:'COMPLETED'},
-  {id:'106870555662',title:'Intro Call',start:'2026-03-23T05:30:00Z',end:'2026-03-23T05:45:00Z',outcome:null},
-];
+// ─── DATA (populated at runtime from data.json) ───
+let DEALS = [];
+let TASKS = [];
+let MEETINGS = [];
 
 // ─── HELPERS ─────────────────────────────────────
 const fmt = n => {
@@ -476,28 +447,51 @@ function renderMeetings(){
 }
 
 // ─── RENDER: ANALYSIS ────────────────────────────
-function renderAnalysis(){
+function renderAnalysis(syncTime){
   const total=DEALS.reduce((s,d)=>s+d.amount,0);
   const weighted=DEALS.reduce((s,d)=>s+(d.amount*d.prob),0);
   const renewals=DEALS.filter(isRenewal);
+  const newbiz=DEALS.filter(d=>!isRenewal(d));
   const rnVal=renewals.reduce((s,d)=>s+d.amount,0);
   const gap=total-weighted;
+  const noActivity=DEALS.filter(d=>!d.lastAct&&!stageLbl(d.stageId).includes('Lead'));
+  const overdue=DEALS.filter(d=>d.close&&untilD(d.close)<0);
+  const noNext=DEALS.filter(d=>!d.nextStep&&!stageLbl(d.stageId).includes('Lead'));
+  const topDeal=DEALS.slice().sort((a,b)=>b.amount*b.prob-a.amount*a.prob)[0];
 
-  const text=[
-    `Your raw pipeline is ${fmt(total)}, but the probability-weighted number is ${fmt(weighted)} — a ${fmt(gap)} gap driven almost entirely by ${renewals.length} renewal deals sitting at 20% probability with no active engagement.`,
-    `Elevate Aviation ($255K, 95% probability) is carrying the weighted pipeline. If that deal slips, the forecast changes significantly. It has had no logged activity since March 26 and no next step — that needs to be addressed before the April 30 close date.`,
-    `Renewals represent ${fmt(rnVal)} in pipeline but are almost entirely in Lead stage. Yamaha, Iris, and SOLTECH all have May close dates — proactive outreach needs to start this week, not next.`,
-    `3 open tasks have no due dates set. Add dates to each so they surface in your weekly review — undated tasks don't get actioned.`,
-  ].join(' ');
+  const lines=[];
+  lines.push(`Your raw pipeline is ${fmt(total)}, with a probability-weighted value of ${fmt(weighted)} — a ${fmt(gap)} gap.`);
+  if(topDeal) lines.push(`${topDeal.name} (${fmt(topDeal.amount)}, ${Math.round(topDeal.prob*100)}% probability) is your highest-weighted deal — keep momentum here.`);
+  if(overdue.length) lines.push(`${overdue.length} deal${overdue.length>1?'s are':' is'} past close date: ${overdue.map(d=>d.name).join(', ')}. Update in HubSpot immediately.`);
+  if(noNext.length) lines.push(`${noNext.length} active deal${noNext.length>1?'s have':' has'} no next step logged — these are at risk of stalling.`);
+  if(renewals.length) lines.push(`Renewals represent ${fmt(rnVal)} across ${renewals.length} deals. Most are in Lead stage with no active engagement — start outreach now.`);
+  const noDate=TASKS.filter(t=>!t.due);
+  if(noDate.length) lines.push(`${noDate.length} open task${noDate.length>1?'s have':' has'} no due date — add dates so they surface in your weekly review.`);
 
-  document.getElementById('aiText').innerHTML=`<span class="ai-meta">Synced Apr 3, 2026 · Ask Claude to refresh for updated read</span>${text}`;
+  const meta=syncTime?`Synced ${syncTime} · Auto-refreshes hourly from HubSpot`:'Live data unavailable — showing cached snapshot';
+  document.getElementById('aiText').innerHTML=`<span class="ai-meta">${meta}</span>${lines.join(' ')}`;
 }
 
 // ─── INIT ─────────────────────────────────────────
-(function(){
+(async function(){
   const now=new Date();
   document.getElementById('weekBadge').textContent='Week of '+now.toLocaleDateString('en-US',{month:'long',day:'numeric'});
-  document.getElementById('syncNote').textContent='Data synced from HubSpot · Apr 3, 2026';
+  document.getElementById('summaryBar').innerHTML='<div style="padding:20px;color:var(--mw-muted-green);font-style:italic;font-size:11px">Loading live data from HubSpot...</div>';
+
+  let syncTime=null;
+  try{
+    const resp=await fetch('data.json?t='+Date.now());
+    if(!resp.ok) throw new Error('not found');
+    const data=await resp.json();
+    DEALS=data.deals||[];
+    TASKS=data.tasks||[];
+    MEETINGS=data.meetings||[];
+    syncTime=new Date(data.synced).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+    document.getElementById('syncNote').textContent='Live data · Last synced '+syncTime;
+  } catch(e){
+    document.getElementById('syncNote').textContent='Could not load live data — check GitHub Action logs';
+  }
+
   renderSummary();
   renderStages();
   renderOpps();
@@ -505,7 +499,7 @@ function renderAnalysis(){
   renderRoadblocks();
   renderTasks();
   renderMeetings();
-  renderAnalysis();
+  renderAnalysis(syncTime);
 })();
 </script>
 </body>
