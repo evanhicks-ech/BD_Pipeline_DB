@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-20T20:13:23.575538+00:00",
+  "synced": "2026-04-20T20:27:46.692581+00:00",
   "deals": [
     {
       "id": "54829708939",
@@ -1200,68 +1200,6 @@
       "nextStep": "",
       "lastAct": "2026-04-15",
       "contacts": 1
-    }
-  ],
-  "tasks": [
-    {
-      "id": "44583403689",
-      "subject": "Set up first strategy call",
-      "due": null,
-      "body": "<p>Set up a first strategy call with Gina Bernstein and Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
-    },
-    {
-      "id": "44583438206",
-      "subject": "Set up first strategy call",
-      "due": null,
-      "body": "<p>Set up a first strategy call with Rachel Stadfeld to align on an approach for this deal. Here are some things to discuss to help you HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
-    },
-    {
-      "id": "56303576497",
-      "subject": "Set up first strategy call",
-      "due": null,
-      "body": "<p>Set up a first strategy call with Megan McLean and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
-    },
-    {
-      "id": "59059379982",
-      "subject": "Set up first strategy call",
-      "due": null,
-      "body": "<p>Set up a first strategy call with Nicholas Franklin and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
-    },
-    {
-      "id": "63185479049",
-      "subject": "Set up first strategy call",
-      "due": null,
-      "body": "<p>Set up a first strategy call with Keil Schneider and Alex Desnoyers to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
-    },
-    {
-      "id": "80955738513",
-      "subject": "Set up first strategy call",
-      "due": null,
-      "body": "<p>Set up a first strategy call with Matt Byer and Charley Vlietstra to align on an approach for this deal. Here are some things to discuss to help your HubSpot deal team get up to speed. </p><ul><li>Your relationship with this customer</li> <li>Background to this deal</li> <li>Budget and timeline to close</li> <li>Role of HubSpot and partner in sales process</li> <li>Next steps</li></ul><p>Use the meeting links displayed in the Shared Deal card to request a meeting.</p>"
-    },
-    {
-      "id": "106978467962",
-      "subject": "Follow up on ezCater - RFP",
-      "due": null,
-      "body": "Regarding note logged on Thursday, March 26, 2026 12:31 PM"
-    },
-    {
-      "id": "107402954593",
-      "subject": "Follow up on E3Tech - Website Redesign + Brand Strategy",
-      "due": null,
-      "body": "Regarding note logged on Thursday, April 2, 2026 2:41 PM"
-    },
-    {
-      "id": "107404670273",
-      "subject": "F/U w/ Kevin Norcross on LI",
-      "due": null,
-      "body": ""
-    },
-    {
-      "id": "107610599328",
-      "subject": "E3Tech Follow-up",
-      "due": null,
-      "body": ""
     }
   ],
   "meetings": [

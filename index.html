@@ -110,16 +110,6 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
 .rb-issue{font-size:10px;color:#555;margin-bottom:3px;}
 .rb-action{font-size:10px;color:var(--mw-blue);font-weight:400;}
 
-/* TASKS */
-.task-item{padding:11px 18px;border-bottom:1px solid var(--mw-beige);display:flex;align-items:flex-start;gap:10px;}
-.task-item:last-child{border-bottom:none;}
-.task-check{width:13px;height:13px;border:1.5px solid var(--mw-muted-green);border-radius:2px;flex-shrink:0;margin-top:2px;}
-.task-subject{font-size:11px;font-weight:500;margin-bottom:2px;}
-.task-body{font-size:9px;color:var(--mw-muted-green);}
-.task-due{font-size:8px;font-family:var(--font-label);font-weight:500;text-transform:uppercase;letter-spacing:.06em;padding:2px 6px;margin-left:auto;flex-shrink:0;align-self:center;}
-.td-none{background:var(--mw-off-white);color:var(--mw-muted-green);}
-.td-soon{background:var(--mw-neon-yellow);color:var(--mw-black);}
-.td-over{background:var(--mw-orange);color:var(--mw-white);}
 
 /* MEETINGS */
 .mtg-item{padding:11px 18px;border-bottom:1px solid var(--mw-beige);display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:12px;}
@@ -188,7 +178,7 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
     </div>
   </div>
 
-  <div class="three-col">
+  <div class="two-col">
     <div>
       <div class="section-label">05 — Roadblocks</div>
       <div class="card">
@@ -197,17 +187,7 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
       </div>
     </div>
     <div>
-      <div class="section-label">06 — Open Tasks</div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">To-Do</span>
-          <span class="card-sub" id="taskCount"></span>
-        </div>
-        <div id="tasksList"></div>
-      </div>
-    </div>
-    <div>
-      <div class="section-label">07 — Meeting Activity</div>
+      <div class="section-label">06 — Meeting Activity</div>
       <div class="card">
         <div class="card-header"><span class="card-title">Recent BD Meetings</span></div>
         <div id="meetingsList"></div>
@@ -253,7 +233,6 @@ const STAGE_MAP = {
 
 // ─── DATA (populated at runtime from data.json) ───
 let DEALS = [];
-let TASKS = [];
 let MEETINGS = [];
 
 // ─── HELPERS ─────────────────────────────────────
@@ -403,26 +382,6 @@ function renderRoadblocks(){
     </div>`).join('');
 }
 
-// ─── RENDER: TASKS ───────────────────────────────
-function renderTasks(){
-  document.getElementById('taskCount').textContent=TASKS.length+' Open';
-  if(!TASKS.length){document.getElementById('tasksList').innerHTML='<div class="empty">No open tasks</div>';return;}
-  document.getElementById('tasksList').innerHTML=TASKS.map(t=>{
-    const du=t.due?untilD(t.due):null;
-    const badge=du===null?`<span class="task-due td-none">No Due Date</span>`:
-      du<0?`<span class="task-due td-over">Overdue</span>`:
-      du<7?`<span class="task-due td-soon">Due Soon</span>`:'';
-    return `<div class="task-item">
-      <div class="task-check"></div>
-      <div>
-        <div class="task-subject"><a class="hs-link" href="https://app.hubspot.com/tasks/20433258/view/all/task/${t.id}" target="_blank">${t.subject}</a></div>
-        ${t.body?`<div class="task-body">${t.body}</div>`:''}
-      </div>
-      ${badge}
-    </div>`;
-  }).join('');
-}
-
 // ─── RENDER: MEETINGS ────────────────────────────
 function renderMeetings(){
   const today=new Date().toDateString();
@@ -465,9 +424,6 @@ function renderAnalysis(syncTime){
   if(overdue.length) lines.push(`${overdue.length} deal${overdue.length>1?'s are':' is'} past close date: ${overdue.map(d=>d.name).join(', ')}. Update in HubSpot immediately.`);
   if(noNext.length) lines.push(`${noNext.length} active deal${noNext.length>1?'s have':' has'} no next step logged — these are at risk of stalling.`);
   if(renewals.length) lines.push(`Renewals represent ${fmt(rnVal)} across ${renewals.length} deals. Most are in Lead stage with no active engagement — start outreach now.`);
-  const noDate=TASKS.filter(t=>!t.due);
-  if(noDate.length) lines.push(`${noDate.length} open task${noDate.length>1?'s have':' has'} no due date — add dates so they surface in your weekly review.`);
-
   const meta=syncTime?`Synced ${syncTime} · Auto-refreshes hourly from HubSpot`:'Live data unavailable — showing cached snapshot';
   document.getElementById('aiText').innerHTML=`<span class="ai-meta">${meta}</span>${lines.join(' ')}`;
 }
@@ -484,7 +440,6 @@ function renderAnalysis(syncTime){
     if(!resp.ok) throw new Error('not found');
     const data=await resp.json();
     DEALS=data.deals||[];
-    TASKS=data.tasks||[];
     MEETINGS=data.meetings||[];
     syncTime=new Date(data.synced).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
     document.getElementById('syncNote').textContent='Live data · Last synced '+syncTime;
@@ -497,7 +452,6 @@ function renderAnalysis(syncTime){
   renderOpps();
   renderDates();
   renderRoadblocks();
-  renderTasks();
   renderMeetings();
   renderAnalysis(syncTime);
 })();

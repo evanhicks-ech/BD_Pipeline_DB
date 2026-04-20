@@ -56,40 +56,6 @@ def fetch_deals():
         })
     return deals
 
-def fetch_archived_owner_ids():
-    resp = requests.get('https://api.hubapi.com/crm/v3/owners?limit=100&archived=true', headers=HEADERS)
-    resp.raise_for_status()
-    return {o['id'] for o in resp.json().get('results', [])}
-
-def fetch_tasks():
-    archived_owners = fetch_archived_owner_ids()
-    resp = requests.post(
-        'https://api.hubapi.com/crm/v3/objects/tasks/search',
-        headers=HEADERS,
-        json={
-            'filterGroups': [{'filters': [
-                {'propertyName': 'hs_task_status', 'operator': 'NEQ', 'value': 'COMPLETED'},
-            ]}],
-            'properties': ['hs_task_subject', 'hs_task_due_date', 'hs_task_body', 'hubspot_owner_id'],
-            'sorts': [{'propertyName': 'hs_task_due_date', 'direction': 'ASCENDING'}],
-            'limit': 100,
-        }
-    )
-    resp.raise_for_status()
-    tasks = []
-    for r in resp.json().get('results', []):
-        p = r['properties']
-        owner_id = p.get('hubspot_owner_id', '')
-        if owner_id in archived_owners:
-            continue
-        tasks.append({
-            'id': r['id'],
-            'subject': p.get('hs_task_subject', ''),
-            'due': p.get('hs_task_due_date') or None,
-            'body': p.get('hs_task_body') or '',
-        })
-    return tasks
-
 def fetch_meetings():
     cutoff = int((datetime.now(timezone.utc) - timedelta(days=30)).timestamp() * 1000)
     resp = requests.post(
@@ -122,14 +88,6 @@ def main():
     deals = fetch_deals()
     print(f'  {len(deals)} deals')
 
-    print('Fetching tasks...')
-    try:
-        tasks = fetch_tasks()
-        print(f'  {len(tasks)} tasks')
-    except Exception as e:
-        print(f'  Tasks unavailable: {e}')
-        tasks = []
-
     print('Fetching meetings...')
     try:
         meetings = fetch_meetings()
@@ -141,7 +99,6 @@ def main():
     output = {
         'synced': datetime.now(timezone.utc).isoformat(),
         'deals': deals,
-        'tasks': tasks,
         'meetings': meetings,
     }
     with open('data.json', 'w') as f:
