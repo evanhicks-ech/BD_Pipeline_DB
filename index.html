@@ -158,6 +158,21 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
 .footer{padding:12px 28px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--mw-muted-green);opacity:.55;}
 .footer-text{font-size:9px;font-weight:300;color:var(--mw-muted-green);}
 .empty{padding:18px;text-align:center;color:var(--mw-muted-green);font-style:italic;font-size:10px;}
+
+/* FILTER BAR */
+.filter-bar{background:#111;padding:10px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;position:sticky;top:46px;z-index:99;border-bottom:1px solid #222;}
+.filter-group{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.filter-label{font-family:var(--font-label);font-size:8px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--mw-muted-green);white-space:nowrap;}
+.filter-select{background:#1c1c1c;border:1px solid #333;color:var(--mw-white);font-family:var(--font-body);font-size:10px;font-weight:300;padding:4px 8px;outline:none;cursor:pointer;min-width:130px;}
+.filter-select:focus{border-color:var(--mw-neon-yellow);}
+.filter-select option{background:#1c1c1c;}
+.fpill{background:transparent;border:1px solid #333;color:#555;font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;padding:3px 9px;cursor:pointer;transition:all .1s;white-space:nowrap;}
+.fpill:hover{border-color:#555;color:#888;}
+.fpill.active{background:var(--mw-neon-yellow);border-color:var(--mw-neon-yellow);color:var(--mw-black);}
+.filter-clear{background:transparent;border:1px solid #444;color:#666;font-family:var(--font-label);font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;padding:3px 10px;cursor:pointer;margin-left:auto;transition:all .1s;}
+.filter-clear:hover{border-color:var(--mw-orange);color:var(--mw-orange);}
+.filter-clear.has-filters{border-color:var(--mw-orange);color:var(--mw-orange);}
+.filter-divider{width:1px;height:20px;background:#2a2a2a;flex-shrink:0;}
 </style>
 </head>
 <body>
@@ -168,6 +183,45 @@ body{background:var(--mw-beige);color:var(--mw-black);font-family:var(--font-bod
     <span class="header-title">BD Pipeline Dashboard</span>
     <span class="week-badge" id="weekBadge"></span>
   </div>
+</div>
+
+<div class="filter-bar" id="filterBar">
+  <div class="filter-group">
+    <span class="filter-label">Owner</span>
+    <select class="filter-select" id="f-owner" onchange="setFilter('owner',this.value)">
+      <option value="all">All Owners</option>
+    </select>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Stage</span>
+    <select class="filter-select" id="f-stage" onchange="setFilter('stage',this.value)">
+      <option value="all">All Stages</option>
+    </select>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Close Date</span>
+    <div style="display:flex;gap:3px">
+      <button class="fpill active" data-filter="closeDate" data-val="all"       onclick="setFilter('closeDate','all')">All</button>
+      <button class="fpill"        data-filter="closeDate" data-val="overdue"   onclick="setFilter('closeDate','overdue')">Overdue</button>
+      <button class="fpill"        data-filter="closeDate" data-val="thisMonth" onclick="setFilter('closeDate','thisMonth')">This Month</button>
+      <button class="fpill"        data-filter="closeDate" data-val="30d"       onclick="setFilter('closeDate','30d')">30d</button>
+      <button class="fpill"        data-filter="closeDate" data-val="60d"       onclick="setFilter('closeDate','60d')">60d</button>
+      <button class="fpill"        data-filter="closeDate" data-val="90d"       onclick="setFilter('closeDate','90d')">90d</button>
+    </div>
+  </div>
+  <div class="filter-divider"></div>
+  <div class="filter-group">
+    <span class="filter-label">Type</span>
+    <div style="display:flex;gap:3px">
+      <button class="fpill active" data-filter="dealType" data-val="all"     onclick="setFilter('dealType','all')">All</button>
+      <button class="fpill"        data-filter="dealType" data-val="newbiz"  onclick="setFilter('dealType','newbiz')">New Biz</button>
+      <button class="fpill"        data-filter="dealType" data-val="upsell"  onclick="setFilter('dealType','upsell')">Upsell</button>
+      <button class="fpill"        data-filter="dealType" data-val="renewal" onclick="setFilter('dealType','renewal')">Renewal</button>
+    </div>
+  </div>
+  <button class="filter-clear" id="filterClear" onclick="clearFilters()">✕ Clear Filters</button>
 </div>
 
 <div class="dashboard">
@@ -270,6 +324,96 @@ const STAGE_MAP = {
 let DEALS = [];
 let CLOSED_LOST = [];
 let MEETINGS = [];
+let SYNC_TIME = null;
+
+// ─── FILTERS ─────────────────────────────────────
+const FILTERS = {owner:'all', stage:'all', closeDate:'all', dealType:'all'};
+
+function setFilter(key, val){
+  FILTERS[key] = val;
+  document.querySelectorAll(`.fpill[data-filter="${key}"]`).forEach(b=>
+    b.classList.toggle('active', b.dataset.val===val)
+  );
+  const hasAny = Object.values(FILTERS).some(v=>v!=='all');
+  document.getElementById('filterClear').classList.toggle('has-filters', hasAny);
+  renderAll();
+}
+
+function clearFilters(){
+  Object.keys(FILTERS).forEach(k=>FILTERS[k]='all');
+  document.getElementById('f-owner').value='all';
+  document.getElementById('f-stage').value='all';
+  document.querySelectorAll('.fpill').forEach(b=>b.classList.toggle('active', b.dataset.val==='all'));
+  document.getElementById('filterClear').classList.remove('has-filters');
+  renderAll();
+}
+
+function applyDealFilters(deals){
+  return deals.filter(d=>{
+    if(FILTERS.owner!=='all' && d.owner!==FILTERS.owner) return false;
+    if(FILTERS.stage!=='all' && d.stageId!==FILTERS.stage) return false;
+    if(FILTERS.dealType!=='all'){
+      if(FILTERS.dealType==='newbiz'  && !isNewBiz(d))  return false;
+      if(FILTERS.dealType==='upsell'  && !isUpsell(d))  return false;
+      if(FILTERS.dealType==='renewal' && !isRenewal(d)) return false;
+    }
+    if(FILTERS.closeDate!=='all'){
+      const du = d.close ? untilD(d.close) : null;
+      if(FILTERS.closeDate==='overdue'){
+        if(du===null||du>=0) return false;
+      } else if(FILTERS.closeDate==='thisMonth'){
+        if(du===null) return false;
+        const now=new Date(), c=new Date(d.close);
+        if(c.getMonth()!==now.getMonth()||c.getFullYear()!==now.getFullYear()) return false;
+      } else {
+        const days=parseInt(FILTERS.closeDate);
+        if(du===null||du<0||du>days) return false;
+      }
+    }
+    return true;
+  });
+}
+
+function applyClosedLostFilters(deals){
+  return deals.filter(d=>{
+    if(FILTERS.owner!=='all' && d.owner!==FILTERS.owner) return false;
+    if(FILTERS.dealType!=='all'){
+      const isUp = d.dealType==='Upsell'||d.dealType==='Account Expansion';
+      const isRn = d.dealType==='Renewal'||d.pipe===RN_PIPE;
+      if(FILTERS.dealType==='newbiz'  && (isUp||isRn)) return false;
+      if(FILTERS.dealType==='upsell'  && !isUp)        return false;
+      if(FILTERS.dealType==='renewal' && !isRn)        return false;
+    }
+    return true;
+  });
+}
+
+function populateFilterOptions(){
+  const owners=[...new Set([...DEALS,...CLOSED_LOST].map(d=>d.owner).filter(o=>o&&o!=='Unassigned'))].sort();
+  const ownerSel=document.getElementById('f-owner');
+  ownerSel.innerHTML='<option value="all">All Owners</option>'+
+    owners.map(o=>`<option value="${o}">${o}</option>`).join('');
+
+  const stageIds=[...new Set(DEALS.map(d=>d.stageId))];
+  const stageSel=document.getElementById('f-stage');
+  stageSel.innerHTML='<option value="all">All Stages</option>'+
+    stageIds.map(id=>({id,label:stageLbl(id)}))
+      .filter(s=>s.label!==s.id)
+      .sort((a,b)=>a.label.localeCompare(b.label))
+      .map(s=>`<option value="${s.id}">${s.label}</option>`)
+      .join('');
+}
+
+function renderAll(){
+  renderSummary();
+  renderStages();
+  renderOpps();
+  renderDates();
+  renderRoadblocks();
+  renderClosedLost();
+  renderMeetings();
+  renderAnalysis(SYNC_TIME);
+}
 
 // ─── HELPERS ─────────────────────────────────────
 const fmt = n => {
@@ -300,14 +444,16 @@ function pillCls(l){
 
 // ─── RENDER: SUMMARY BAR ─────────────────────────
 function renderSummary(){
-  const nb       = DEALS.filter(isNewBiz);
-  const upsells  = DEALS.filter(isUpsell);
-  const renewals = DEALS.filter(isRenewal);
+  const fd       = applyDealFilters(DEALS);
+  const nb       = fd.filter(isNewBiz);
+  const upsells  = fd.filter(isUpsell);
+  const renewals = fd.filter(isRenewal);
   const nbVal    = nb.reduce((s,d)=>s+d.amount,0);
   const upVal    = upsells.reduce((s,d)=>s+d.amount,0);
   const rnVal    = renewals.reduce((s,d)=>s+d.amount,0);
   const total    = nbVal+upVal+rnVal;
-  const weighted = DEALS.reduce((s,d)=>s+(d.amount*d.prob),0);
+  const weighted = fd.reduce((s,d)=>s+(d.amount*d.prob),0);
+  const filteredNote = fd.length<DEALS.length ? ` <span style="font-size:8px;opacity:.5">(${fd.length} of ${DEALS.length})</span>` : '';
 
   document.getElementById('summaryBar').innerHTML=`
     <div class="sum-card s-nb">
@@ -333,7 +479,7 @@ function renderSummary(){
     <div class="sum-card s-total">
       <div class="sum-label">Total Pipeline</div>
       <div class="sum-value">${fmt(total)}</div>
-      <div class="sum-sub">${DEALS.length} active deals</div>
+      <div class="sum-sub">${fd.length} active deals${filteredNote}</div>
     </div>`;
 }
 
@@ -345,7 +491,7 @@ function renderStages(){
     {l:'Proposal',c:'s-prop',v:0,n:0},
     {l:'SOW / Legal / Negotiation',c:'s-sow',v:0,n:0},
   ];
-  DEALS.forEach(d=>{
+  applyDealFilters(DEALS).forEach(d=>{
     const l=stageLbl(d.stageId); const a=d.amount;
     if(l.includes('Lead')||l.includes('Hold')){B[0].v+=a;B[0].n++;}
     else if(l.includes('Scoping')||l.includes('Discovery')||l.includes('Pitch')){B[1].v+=a;B[1].n++;}
@@ -451,14 +597,15 @@ function buildDealTable(deals, wrapperId, title){
 }
 
 function renderOpps(){
-  buildDealTable(DEALS.filter(isNewBiz), 'nbDealsWrap', 'New Business');
-  buildDealTable(DEALS.filter(isUpsell),  'upDealsWrap', 'Upsell');
-  buildDealTable(DEALS.filter(isRenewal), 'rnDealsWrap', 'Renewals');
+  const fd = applyDealFilters(DEALS);
+  buildDealTable(fd.filter(isNewBiz), 'nbDealsWrap', 'New Business');
+  buildDealTable(fd.filter(isUpsell),  'upDealsWrap', 'Upsell');
+  buildDealTable(fd.filter(isRenewal), 'rnDealsWrap', 'Renewals');
 }
 
 // ─── RENDER: KEY DATES ───────────────────────────
 function renderDates(){
-  const up=DEALS.filter(d=>d.close&&untilD(d.close)>-30&&untilD(d.close)<90)
+  const up=applyDealFilters(DEALS).filter(d=>d.close&&untilD(d.close)>-30&&untilD(d.close)<90)
     .sort((a,b)=>new Date(a.close)-new Date(b.close)).slice(0,6);
   if(!up.length){document.getElementById('keyDates').innerHTML='<div class="empty">No upcoming close dates</div>';return;}
   document.getElementById('keyDates').innerHTML=up.map(d=>{
@@ -478,13 +625,14 @@ function renderDates(){
 // ─── RENDER: ROADBLOCKS ──────────────────────────
 function renderRoadblocks(){
   const B=[];
-  const od=DEALS.filter(d=>d.close&&untilD(d.close)<0);
+  const fd=applyDealFilters(DEALS);
+  const od=fd.filter(d=>d.close&&untilD(d.close)<0);
   if(od.length) B.push({dot:'rb-red',co:od.map(d=>d.name).join(', '),issue:`${od.length} deal${od.length>1?'s are':' is'} past close date with no resolution logged.`,act:'Update close dates in HubSpot this week.'});
-  const ns=DEALS.filter(d=>!d.nextStep&&!stageLbl(d.stageId).includes('Lead'));
+  const ns=fd.filter(d=>!d.nextStep&&!stageLbl(d.stageId).includes('Lead'));
   if(ns.length) B.push({dot:'rb-yellow',co:ns.map(d=>d.name).slice(0,3).join(', ')+(ns.length>3?` +${ns.length-3} more`:''),issue:`${ns.length} active deals have no next step logged.`,act:'Add a next step for each before Monday pipeline review.'});
-  const st=DEALS.filter(d=>!stageLbl(d.stageId).includes('Lead')&&d.lastAct&&sinceD(d.lastAct)>14);
+  const st=fd.filter(d=>!stageLbl(d.stageId).includes('Lead')&&d.lastAct&&sinceD(d.lastAct)>14);
   if(st.length) B.push({dot:'rb-yellow',co:st.map(d=>d.name).slice(0,3).join(', ')+(st.length>3?` +${st.length-3} more`:''),issue:`${st.length} deal${st.length>1?'s have':' has'} had no activity in 14+ days.`,act:'Send a value-add touch or re-engagement call.'});
-  const na=DEALS.filter(d=>!d.amount);
+  const na=fd.filter(d=>!d.amount);
   if(na.length) B.push({dot:'rb-yellow',co:na.map(d=>d.name).join(', '),issue:`${na.length} deal${na.length>1?'s have':' has'} $0 amount — missing from weighted pipeline total.`,act:'Add an estimated value range to each deal.'});
   if(!B.length) B.push({dot:'rb-green',co:'No critical blockers',issue:'Pipeline looks clean. Keep momentum.',act:''});
   document.getElementById('roadblocks').innerHTML=B.map(b=>`
@@ -498,13 +646,14 @@ function renderRoadblocks(){
 function renderClosedLost(){
   const NB_CL='caa876d5-e7c0-467b-9456-ec136d6f83f1';
   const RN_CL='74889ee1-e828-43e0-a467-5e2916da3932';
-  if(!CLOSED_LOST.length){
+  const cl=applyClosedLostFilters(CLOSED_LOST);
+  if(!cl.length){
     document.getElementById('closedLostCount').textContent='None in last 90 days';
     document.getElementById('closedLostWrap').innerHTML='<div class="empty">No closed lost deals in the last 90 days</div>';
     return;
   }
-  const totalLost=CLOSED_LOST.reduce((s,d)=>s+d.amount,0);
-  document.getElementById('closedLostCount').textContent=`${CLOSED_LOST.length} deals · ${fmt(totalLost)} lost`;
+  const totalLost=cl.reduce((s,d)=>s+d.amount,0);
+  document.getElementById('closedLostCount').textContent=`${cl.length} deals · ${fmt(totalLost)} lost`;
 
   const typeLabel = d => {
     if(d.dealType==='Upsell'||d.dealType==='Account Expansion') return '<span class="type-badge tb-up">Upsell</span>';
@@ -516,7 +665,7 @@ function renderClosedLost(){
   document.getElementById('closedLostWrap').innerHTML=`
     <table class="cl-table">
       <thead><tr><th>Deal</th><th>Type</th><th>Value</th><th>Owner</th><th>Date Lost</th></tr></thead>
-      <tbody>${CLOSED_LOST.map(d=>`
+      <tbody>${cl.map(d=>`
         <tr>
           <td><a class="hs-link" href="https://app.hubspot.com/contacts/20433258/record/0-3/${d.id}" target="_blank">${d.name}</a></td>
           <td>${typeLabel(d)}</td>
@@ -553,17 +702,18 @@ function renderMeetings(){
 
 // ─── RENDER: ANALYSIS ────────────────────────────
 function renderAnalysis(syncTime){
-  const total=DEALS.reduce((s,d)=>s+d.amount,0);
-  const weighted=DEALS.reduce((s,d)=>s+(d.amount*d.prob),0);
-  const renewals=DEALS.filter(isRenewal);
-  const upsells=DEALS.filter(isUpsell);
-  const nb=DEALS.filter(isNewBiz);
+  const fd=applyDealFilters(DEALS);
+  const total=fd.reduce((s,d)=>s+d.amount,0);
+  const weighted=fd.reduce((s,d)=>s+(d.amount*d.prob),0);
+  const renewals=fd.filter(isRenewal);
+  const upsells=fd.filter(isUpsell);
+  const nb=fd.filter(isNewBiz);
   const rnVal=renewals.reduce((s,d)=>s+d.amount,0);
   const upVal=upsells.reduce((s,d)=>s+d.amount,0);
   const gap=total-weighted;
-  const overdue=DEALS.filter(d=>d.close&&untilD(d.close)<0);
-  const noNext=DEALS.filter(d=>!d.nextStep&&!stageLbl(d.stageId).includes('Lead'));
-  const topDeal=DEALS.slice().sort((a,b)=>b.amount*b.prob-a.amount*a.prob)[0];
+  const overdue=fd.filter(d=>d.close&&untilD(d.close)<0);
+  const noNext=fd.filter(d=>!d.nextStep&&!stageLbl(d.stageId).includes('Lead'));
+  const topDeal=fd.slice().sort((a,b)=>b.amount*b.prob-a.amount*a.prob)[0];
 
   const lines=[];
   lines.push(`Your raw pipeline is ${fmt(total)} across ${nb.length} new business, ${upsells.length} upsell, and ${renewals.length} renewal deals. Probability-weighted value is ${fmt(weighted)}.`);
@@ -582,7 +732,6 @@ function renderAnalysis(syncTime){
   document.getElementById('weekBadge').textContent='Week of '+now.toLocaleDateString('en-US',{month:'long',day:'numeric'});
   document.getElementById('summaryBar').innerHTML='<div style="padding:20px;color:var(--mw-muted-green);font-style:italic;font-size:11px">Loading live data from HubSpot...</div>';
 
-  let syncTime=null;
   try{
     const resp=await fetch('data.json?t='+Date.now());
     if(!resp.ok) throw new Error('not found');
@@ -590,20 +739,14 @@ function renderAnalysis(syncTime){
     DEALS=data.deals||[];
     CLOSED_LOST=data.closedLost||[];
     MEETINGS=data.meetings||[];
-    syncTime=new Date(data.synced).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
-    document.getElementById('syncNote').textContent='Live data · Last synced '+syncTime;
+    SYNC_TIME=new Date(data.synced).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'});
+    document.getElementById('syncNote').textContent='Live data · Last synced '+SYNC_TIME;
   } catch(e){
     document.getElementById('syncNote').textContent='Could not load live data — check GitHub Action logs';
   }
 
-  renderSummary();
-  renderStages();
-  renderOpps();
-  renderDates();
-  renderClosedLost();
-  renderRoadblocks();
-  renderMeetings();
-  renderAnalysis(syncTime);
+  populateFilterOptions();
+  renderAll();
 })();
 </script>
 </body>
