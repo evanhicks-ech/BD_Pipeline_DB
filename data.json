@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-22T19:56:18.252425+00:00",
+  "synced": "2026-04-22T22:34:28.302216+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -867,16 +867,6 @@
       "close": "2026-01-28",
       "owner": "Taylor Wesley",
       "lostReason": "No longer needed"
-    },
-    {
-      "id": "48943051535",
-      "name": "TapMango - Website/Brand Refresh",
-      "amount": 76000.0,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "dealType": "",
-      "close": "2026-01-22",
-      "owner": "Natalie Clauson",
-      "lostReason": ""
     }
   ],
   "meetings": [
