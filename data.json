@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-22T15:53:18.557164+00:00",
+  "synced": "2026-04-22T19:56:18.252425+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -295,7 +295,7 @@
       "stageId": "1090940083",
       "close": null,
       "nextStep": "Get update from Emma",
-      "lastAct": "2026-04-15",
+      "lastAct": "2026-04-22",
       "contacts": 3,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
@@ -877,16 +877,6 @@
       "close": "2026-01-22",
       "owner": "Natalie Clauson",
       "lostReason": ""
-    },
-    {
-      "id": "48945850234",
-      "name": "TapMango - Retainer Change Order",
-      "amount": 296410.0,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "dealType": "",
-      "close": "2026-01-22",
-      "owner": "Brooke MacLean",
-      "lostReason": "No longer needed"
     }
   ],
   "meetings": [
