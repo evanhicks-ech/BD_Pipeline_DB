@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-22T13:15:20.147452+00:00",
+  "synced": "2026-04-22T15:53:18.557164+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -54,7 +54,7 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
       "close": null,
-      "nextStep": "F/U w/ Rajat 4/27",
+      "nextStep": "F/U w/ Rajat 4/29 (if he hasn't reached out yet)",
       "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Evan Hicks",
@@ -70,7 +70,7 @@
       "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
       "close": null,
       "nextStep": "Meeting @ Bunkr 4/23",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
@@ -100,7 +100,7 @@
       "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Alex LeMieux",
       "dealType": "Upsell",
@@ -130,7 +130,7 @@
       "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Alex LeMieux",
       "dealType": "Upsell",
@@ -167,21 +167,6 @@
       "description": ""
     },
     {
-      "id": "51339942328",
-      "name": "Sylvan - ECommerce Site - March",
-      "amount": 42150.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-02",
-      "contacts": 0,
-      "owner": "Natalie Clauson",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "58406408516",
       "name": "Yamaha - Renewal",
       "amount": 39375.0,
@@ -205,25 +190,10 @@
       "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "amber chancy",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "58406408251",
-      "name": "Phosphorus - Renewal",
-      "amount": 28200.0,
-      "prob": 0.35,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-21",
-      "contacts": 1,
-      "owner": "Sarah Nolen",
-      "dealType": "Renewal",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -250,25 +220,10 @@
       "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Alex LeMieux",
       "dealType": "Upsell",
-      "description": ""
-    },
-    {
-      "id": "48945589916",
-      "name": "Furman",
-      "amount": 24350.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-01-05",
-      "contacts": 0,
-      "owner": "M W",
-      "dealType": "",
       "description": ""
     },
     {
@@ -317,21 +272,6 @@
       "description": ""
     },
     {
-      "id": "54272609174",
-      "name": "STAT Wellness - New Location Plan",
-      "amount": 15750.0,
-      "prob": 0.9,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-20",
-      "contacts": 1,
-      "owner": "Madison Pruitt",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "59186241392",
       "name": "Evident - Renewal",
       "amount": 15067.5,
@@ -354,11 +294,11 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "1090940083",
       "close": null,
-      "nextStep": "",
+      "nextStep": "Get update from Emma",
       "lastAct": "2026-04-15",
-      "contacts": 1,
-      "owner": "Natalie Clauson",
-      "dealType": "",
+      "contacts": 3,
+      "owner": "Evan Hicks",
+      "dealType": "newbusiness",
       "description": ""
     },
     {
@@ -400,25 +340,10 @@
       "stageId": "1090940083",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Katherine Krajec",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "41078961313",
-      "name": "Machete - CRO Audit & Analysis - Q2 2026",
-      "amount": 8250.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2025-08-11",
-      "contacts": 0,
-      "owner": "Natalie Clauson",
-      "dealType": "",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -452,36 +377,6 @@
       "description": ""
     },
     {
-      "id": "39085867958",
-      "name": "Evident - Collateral (Q4)",
-      "amount": 6500.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2025-07-08",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "57623921592",
-      "name": "Sylvan - Office Art",
-      "amount": 5150.0,
-      "prob": 0.9,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-20",
-      "contacts": 1,
-      "owner": "Alex LeMieux",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "58406409507",
       "name": "North Point Ministries - Renewal",
       "amount": 4725.0,
@@ -494,21 +389,6 @@
       "contacts": 0,
       "owner": "Evan Hicks",
       "dealType": "Renewal",
-      "description": ""
-    },
-    {
-      "id": "55412842271",
-      "name": "BIP Wealth - Video Upsell",
-      "amount": 4500.0,
-      "prob": 0.9,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-20",
-      "contacts": 1,
-      "owner": "Madison Pruitt",
-      "dealType": "",
       "description": ""
     },
     {
@@ -527,96 +407,6 @@
       "description": ""
     },
     {
-      "id": "47890961789",
-      "name": "STAT Wellness - Video Upsell",
-      "amount": 3500.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-01-07",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "40229676955",
-      "name": "Relato/Baylor",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2025-08-04",
-      "contacts": 0,
-      "owner": "Natalie Clauson",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "40317760178",
-      "name": "Cutting Edge Firewood - Merch",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2025-07-16",
-      "contacts": 0,
-      "owner": "Natalie Clauson",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "40676779340",
-      "name": "STAT Wellness",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2025-08-25",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "45327219813",
-      "name": "Alta - Summer 2026",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "1090940083",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2025-11-24",
-      "contacts": 0,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "53014686284",
-      "name": "The Physical AI Summit",
-      "amount": 0.0,
-      "prob": 0.35,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-01-15",
-      "contacts": 0,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "56025491482",
       "name": "T.Lake - Performance Marketing",
       "amount": 0.0,
@@ -632,21 +422,6 @@
       "description": ""
     },
     {
-      "id": "56611836455",
-      "name": "Tour24 - Website",
-      "amount": 0.0,
-      "prob": 0.35,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-02-25",
-      "contacts": 0,
-      "owner": "Brooke MacLean",
-      "dealType": "newbusiness",
-      "description": ""
-    },
-    {
       "id": "57506904887",
       "name": "Fargo Jet Center - Hubspot Build",
       "amount": 0.0,
@@ -655,10 +430,10 @@
       "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-03-24",
-      "contacts": 0,
+      "lastAct": "2026-04-22",
+      "contacts": 1,
       "owner": "Haley Theisen",
-      "dealType": "",
+      "dealType": "newbusiness",
       "description": ""
     },
     {
@@ -670,10 +445,10 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Brooke MacLean",
-      "dealType": "",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -700,10 +475,10 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
+      "owner": "Alex LeMieux",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -715,10 +490,10 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
+      "owner": "Taylor Wesley",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -730,10 +505,10 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
+      "owner": "Taylor Wesley",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -760,10 +535,10 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
+      "owner": "Taylor Wesley",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -775,10 +550,10 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
+      "owner": "Sarah Nolen",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -790,10 +565,10 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
+      "owner": "Alex LeMieux",
+      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -813,6 +588,26 @@
     }
   ],
   "closedLost": [
+    {
+      "id": "57623921592",
+      "name": "Sylvan - Office Art",
+      "amount": 5150.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "Upsell",
+      "close": "2026-04-22",
+      "owner": "Alex LeMieux",
+      "lostReason": "Cost/Budget"
+    },
+    {
+      "id": "51339942328",
+      "name": "Sylvan - ECommerce Site - March",
+      "amount": 42150.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "Upsell",
+      "close": "2026-04-22",
+      "owner": "Alex LeMieux",
+      "lostReason": ""
+    },
     {
       "id": "55478583878",
       "name": "Atlas Cloud - Mailchimp Referral",
@@ -974,6 +769,16 @@
       "lostReason": ""
     },
     {
+      "id": "55412842271",
+      "name": "BIP Wealth - Video Upsell",
+      "amount": 4500.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "Upsell",
+      "close": "2026-03-05",
+      "owner": "Madison Pruitt",
+      "lostReason": ""
+    },
+    {
       "id": "49913719048",
       "name": "Signature Aviation - Pendo Implementation",
       "amount": 40888.75,
@@ -994,6 +799,16 @@
       "lostReason": "Cost/Budget"
     },
     {
+      "id": "56611836455",
+      "name": "Tour24 - Website",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "newbusiness",
+      "close": "2026-02-28",
+      "owner": "Brooke MacLean",
+      "lostReason": ""
+    },
+    {
       "id": "54326538595",
       "name": "Signature Aviation - Campaign Tracking",
       "amount": 2700.0,
@@ -1001,6 +816,16 @@
       "dealType": "",
       "close": "2026-02-20",
       "owner": "Alex LeMieux",
+      "lostReason": "No longer needed"
+    },
+    {
+      "id": "54272609174",
+      "name": "STAT Wellness - New Location Plan",
+      "amount": 15750.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-02-19",
+      "owner": "Madison Pruitt",
       "lostReason": "No longer needed"
     },
     {
@@ -1021,6 +846,16 @@
       "dealType": "",
       "close": "2026-02-12",
       "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
+    {
+      "id": "53014686284",
+      "name": "The Physical AI Summit",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "newbusiness",
+      "close": "2026-01-31",
+      "owner": "Brooke MacLean",
       "lostReason": ""
     },
     {
