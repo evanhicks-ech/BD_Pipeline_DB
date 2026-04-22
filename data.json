@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-20T20:52:37.608330+00:00",
+  "synced": "2026-04-22T13:15:20.147452+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -9,7 +9,7 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
       "close": null,
-      "nextStep": "F/U w/ Rawan",
+      "nextStep": "F/U w/ Rawan on 4/22",
       "lastAct": "2026-04-15",
       "contacts": 1,
       "owner": "Evan Hicks",
@@ -54,8 +54,8 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
       "close": null,
-      "nextStep": "RFI Questions due 4/9",
-      "lastAct": "2026-04-09",
+      "nextStep": "F/U w/ Rajat 4/27",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
@@ -63,13 +63,13 @@
     },
     {
       "id": "58167953966",
-      "name": "The Bunkr Golf Co",
+      "name": "The Bunkr Golf Co - Marketing Management & Content Production",
       "amount": 96000.0,
       "prob": 0.35,
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
       "close": null,
-      "nextStep": "",
+      "nextStep": "Meeting @ Bunkr 4/23",
       "lastAct": "2026-04-20",
       "contacts": 1,
       "owner": "Evan Hicks",
@@ -85,7 +85,7 @@
       "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
       "close": null,
       "nextStep": "Schedule follow-up call for Kristen to bring on other E3Tech stakeholders",
-      "lastAct": "2026-04-08",
+      "lastAct": "2026-04-21",
       "contacts": 1,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
@@ -145,9 +145,9 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-21",
       "contacts": 1,
-      "owner": "Alex LeMieux",
+      "owner": "Kellye Gardner",
       "dealType": "Renewal",
       "description": ""
     },
@@ -220,7 +220,7 @@
       "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-15",
+      "lastAct": "2026-04-21",
       "contacts": 1,
       "owner": "Sarah Nolen",
       "dealType": "Renewal",
@@ -617,21 +617,6 @@
       "description": ""
     },
     {
-      "id": "55478583878",
-      "name": "Atlas Cloud - Mailchimp Referral",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "267918443",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-02-18",
-      "contacts": 0,
-      "owner": "Natalie Clauson",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "56025491482",
       "name": "T.Lake - Performance Marketing",
       "amount": 0.0,
@@ -699,10 +684,10 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "947627921",
       "close": null,
-      "nextStep": "",
-      "lastAct": "2026-03-25",
+      "nextStep": "F/U w/ Samuel 4.27",
+      "lastAct": "2026-04-21",
       "contacts": 1,
-      "owner": "Brooke MacLean",
+      "owner": "Evan Hicks",
       "dealType": "",
       "description": ""
     },
@@ -737,21 +722,6 @@
       "description": ""
     },
     {
-      "id": "58937782968",
-      "name": "Koyal Technologies LLP",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "947627921",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-14",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "58938601530",
       "name": "DCA Live - Brand Strategy",
       "amount": 0.0,
@@ -774,7 +744,7 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "267918443",
       "close": null,
-      "nextStep": "Send Gavin Inventory Questionnaire",
+      "nextStep": "Sent Gavin Inventory Questionnaire: F/U 4/23",
       "lastAct": "2026-04-20",
       "contacts": 1,
       "owner": "Brooke MacLean",
@@ -791,51 +761,6 @@
       "close": null,
       "nextStep": "",
       "lastAct": "2026-04-20",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "59146775583",
-      "name": "BPO Innovations",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "947627921",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-13",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "59174785089",
-      "name": "Optin Prospects",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "947627921",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-15",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
-      "id": "59179358136",
-      "name": "Meridian GRC",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "947627921",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-15",
       "contacts": 1,
       "owner": "Brooke MacLean",
       "dealType": "",
@@ -872,21 +797,6 @@
       "description": ""
     },
     {
-      "id": "59268307079",
-      "name": "50Pros",
-      "amount": 0.0,
-      "prob": 0.2,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "947627921",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-17",
-      "contacts": 1,
-      "owner": "Brooke MacLean",
-      "dealType": "",
-      "description": ""
-    },
-    {
       "id": "59372440329",
       "name": "Braze - Performance Marketing",
       "amount": 0.0,
@@ -903,6 +813,16 @@
     }
   ],
   "closedLost": [
+    {
+      "id": "55478583878",
+      "name": "Atlas Cloud - Mailchimp Referral",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "",
+      "close": "2026-04-21",
+      "owner": "Natalie Clauson",
+      "lostReason": ""
+    },
     {
       "id": "49134465027",
       "name": "Solomon Brothers",
@@ -1132,22 +1052,19 @@
       "close": "2026-01-22",
       "owner": "Brooke MacLean",
       "lostReason": "No longer needed"
-    },
-    {
-      "id": "53879117423",
-      "name": "Grand Homes and Gardens, LLC.",
-      "amount": 0.0,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "dealType": "",
-      "close": "2026-01-21",
-      "owner": "Natalie Clauson",
-      "lostReason": "Cost/Budget"
     }
   ],
   "meetings": [
     {
       "id": "108184293801",
       "title": "The \"Crazy Curious\" Crew",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "108361207136",
+      "title": "Golf at Bunkr",
       "start": null,
       "end": null,
       "outcome": null
@@ -1228,13 +1145,6 @@
       "start": null,
       "end": null,
       "outcome": "COMPLETED"
-    },
-    {
-      "id": "106870555662",
-      "title": "Untitled Meeting",
-      "start": null,
-      "end": null,
-      "outcome": null
     }
   ]
 }
