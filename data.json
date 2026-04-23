@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-23T20:14:45.613505+00:00",
+  "synced": "2026-04-23T23:32:19.779066+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -294,7 +294,7 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "1090940083",
       "close": null,
-      "nextStep": "Get update from Emma",
+      "nextStep": "F/U w/ Drew ",
       "lastAct": "2026-04-22",
       "contacts": 3,
       "owner": "Evan Hicks",
@@ -890,6 +890,13 @@
     {
       "id": "108184293801",
       "title": "The \"Crazy Curious\" Crew",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
+      "id": "108543551317",
+      "title": "Meeting with Roy",
       "start": null,
       "end": null,
       "outcome": null
