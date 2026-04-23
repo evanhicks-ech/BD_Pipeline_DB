@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-22T22:34:28.302216+00:00",
+  "synced": "2026-04-23T06:20:14.982778+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -520,7 +520,7 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "Sent Gavin Inventory Questionnaire: F/U 4/23",
-      "lastAct": "2026-04-20",
+      "lastAct": "2026-04-22",
       "contacts": 1,
       "owner": "Brooke MacLean",
       "dealType": "",
@@ -584,6 +584,21 @@
       "contacts": 2,
       "owner": "Brooke MacLean",
       "dealType": "Upsell",
+      "description": ""
+    },
+    {
+      "id": "59459588498",
+      "name": "Queen One",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": "2026-04-23",
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
       "description": ""
     }
   ],
