@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-23T10:58:32.178065+00:00",
+  "synced": "2026-04-23T16:55:21.459004+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -70,7 +70,7 @@
       "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
       "close": null,
       "nextStep": "Meeting @ Bunkr 4/23",
-      "lastAct": "2026-04-22",
+      "lastAct": "2026-04-23",
       "contacts": 1,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
@@ -422,21 +422,6 @@
       "description": ""
     },
     {
-      "id": "57506904887",
-      "name": "Fargo Jet Center - Hubspot Build",
-      "amount": 0.0,
-      "prob": 0.9,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-22",
-      "contacts": 1,
-      "owner": "Haley Theisen",
-      "dealType": "newbusiness",
-      "description": ""
-    },
-    {
       "id": "58175554695",
       "name": "Tackle - Performance Marketing",
       "amount": 0.0,
@@ -520,7 +505,7 @@
       "stageId": "267918443",
       "close": null,
       "nextStep": "Sent Gavin Inventory Questionnaire: F/U 4/23",
-      "lastAct": "2026-04-22",
+      "lastAct": "2026-04-23",
       "contacts": 1,
       "owner": "Brooke MacLean",
       "dealType": "",
@@ -603,6 +588,16 @@
     }
   ],
   "closedLost": [
+    {
+      "id": "57506904887",
+      "name": "Fargo Jet Center - Hubspot Build",
+      "amount": 0.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "newbusiness",
+      "close": "2026-04-23",
+      "owner": "Haley Theisen",
+      "lostReason": ""
+    },
     {
       "id": "57623921592",
       "name": "Sylvan - Office Art",
@@ -886,6 +881,13 @@
   ],
   "meetings": [
     {
+      "id": "108464082265",
+      "title": "MarketWake/Kevin Carlson Intro",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
+    {
       "id": "108184293801",
       "title": "The \"Crazy Curious\" Crew",
       "start": null,
@@ -968,13 +970,6 @@
       "start": null,
       "end": null,
       "outcome": "SCHEDULED"
-    },
-    {
-      "id": "106981282340",
-      "title": "Untitled Meeting",
-      "start": null,
-      "end": null,
-      "outcome": "COMPLETED"
     }
   ]
 }
