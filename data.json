@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-24T10:56:15.198342+00:00",
+  "synced": "2026-04-24T14:59:31.414539+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -179,21 +179,6 @@
       "contacts": 1,
       "owner": "Tyler Rees",
       "dealType": "Renewal",
-      "description": ""
-    },
-    {
-      "id": "56239947136",
-      "name": "5Q - New Service Line",
-      "amount": 28250.0,
-      "prob": 0.9,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-23",
-      "contacts": 1,
-      "owner": "amber chancy",
-      "dealType": "Upsell",
       "description": ""
     },
     {
