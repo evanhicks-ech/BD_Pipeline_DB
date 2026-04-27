@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-27T20:42:02.169400+00:00",
+  "synced": "2026-04-27T23:39:15.124437+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -557,23 +557,23 @@
       "description": ""
     },
     {
-      "id": "59459588498",
-      "name": "Queen One",
+      "id": "59723203965",
+      "name": "B2BDataCorp",
       "amount": 0.0,
       "prob": 0.2,
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "947627921",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-23",
+      "lastAct": "2026-04-27",
       "contacts": 1,
       "owner": "Brooke MacLean",
       "dealType": "",
       "description": ""
     },
     {
-      "id": "59723203965",
-      "name": "B2BDataCorp",
+      "id": "59751935753",
+      "name": "Atlas Origination",
       "amount": 0.0,
       "prob": 0.2,
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
