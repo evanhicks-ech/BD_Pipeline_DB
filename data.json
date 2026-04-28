@@ -1,15 +1,15 @@
 {
-  "synced": "2026-04-28T16:13:42.211653+00:00",
+  "synced": "2026-04-28T20:53:52.580842+00:00",
   "deals": [
     {
       "id": "58332124842",
       "name": "Elevate Aviation Group, LLC - RFP",
       "amount": 255000.0,
-      "prob": 0.95,
+      "prob": 0.2,
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "9d861ce8-c36c-40c2-b0c4-ec76a096cb1e",
+      "stageId": "1090940083",
       "close": null,
-      "nextStep": "F/U w/ Rawan on 4/22",
+      "nextStep": "Circle back w/ Rawan: Active Q4 initiative?",
       "lastAct": "2026-04-28",
       "contacts": 1,
       "owner": "Evan Hicks",
@@ -852,29 +852,19 @@
       "close": "2026-01-31",
       "owner": "Brooke MacLean",
       "lostReason": ""
-    },
-    {
-      "id": "54615861368",
-      "name": "CUCU - Upsell",
-      "amount": 4000.0,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "dealType": "",
-      "close": "2026-01-28",
-      "owner": "Taylor Wesley",
-      "lostReason": "No longer needed"
     }
   ],
   "meetings": [
     {
-      "id": "108739795556",
-      "title": "Intro Brooke MacLean (Marketwake) & Drew (BluSky) ",
+      "id": "108728551764",
+      "title": "Ramping up referrals and mapping mountains (take 2!)",
       "start": null,
       "end": null,
       "outcome": null
     },
     {
-      "id": "108728551764",
-      "title": "Ramping up referrals and mapping mountains",
+      "id": "108739795556",
+      "title": "Intro Brooke MacLean (Marketwake) & Drew (BluSky) ",
       "start": null,
       "end": null,
       "outcome": null
