@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-29T16:16:48.443608+00:00",
+  "synced": "2026-04-29T20:43:33.735286+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -524,6 +524,36 @@
       "contacts": 1,
       "owner": "Brooke MacLean",
       "dealType": "",
+      "description": ""
+    },
+    {
+      "id": "59806754148",
+      "name": "Braze - Performance Marketing",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "267918443",
+      "close": null,
+      "nextStep": "",
+      "lastAct": "2026-04-29",
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
+    },
+    {
+      "id": "59812313437",
+      "name": "WorldCare International - Wordpress Project",
+      "amount": 0.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
+      "close": null,
+      "nextStep": "Schedule deeper discovery call w/ WorldCare CEO",
+      "lastAct": "2026-04-29",
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "newbusiness",
       "description": ""
     }
   ],
