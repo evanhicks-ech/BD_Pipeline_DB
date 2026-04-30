@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-30T15:57:55.258942+00:00",
+  "synced": "2026-04-30T20:17:48.270103+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -14,21 +14,6 @@
       "contacts": 1,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
-      "description": ""
-    },
-    {
-      "id": "57352056164",
-      "name": "Sayers - Performance Marketing",
-      "amount": 195000.0,
-      "prob": 0.9,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "0890bbc4-2d85-4e1f-8381-286da6548c41",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-29",
-      "contacts": 1,
-      "owner": "Marley Barnett",
-      "dealType": "Upsell",
       "description": ""
     },
     {
@@ -302,6 +287,21 @@
       "description": ""
     },
     {
+      "id": "59814885285",
+      "name": "Sayers - 10 Dev Hours - Deck & Website Fixes",
+      "amount": 8475.0,
+      "prob": 0.2,
+      "pipe": "fe3127d4-2fac-46cc-af91-d21cd0ce70cd",
+      "stageId": "942502151",
+      "close": null,
+      "nextStep": "",
+      "lastAct": "2026-04-30",
+      "contacts": 0,
+      "owner": "Julia Berger",
+      "dealType": "Upsell",
+      "description": ""
+    },
+    {
       "id": "58406223008",
       "name": "FairPlay AI - Renewal",
       "amount": 8169.0,
@@ -512,21 +512,6 @@
       "description": ""
     },
     {
-      "id": "59372440329",
-      "name": "Braze - Performance Marketing",
-      "amount": 0.0,
-      "prob": 0.35,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
-      "close": null,
-      "nextStep": "",
-      "lastAct": "2026-04-20",
-      "contacts": 2,
-      "owner": "Katherine Krajec",
-      "dealType": "Upsell",
-      "description": ""
-    },
-    {
       "id": "59752013721",
       "name": "Georgia Chamber - Performance Marketing",
       "amount": 0.0,
@@ -570,9 +555,34 @@
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
       "description": ""
+    },
+    {
+      "id": "59854309279",
+      "name": "Focus Health",
+      "amount": 0.0,
+      "prob": 0.2,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "947627921",
+      "close": null,
+      "nextStep": "",
+      "lastAct": "2026-04-30",
+      "contacts": 1,
+      "owner": "Brooke MacLean",
+      "dealType": "",
+      "description": ""
     }
   ],
   "closedLost": [
+    {
+      "id": "57352056164",
+      "name": "Sayers - Performance Marketing",
+      "amount": 195000.0,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "dealType": "Upsell",
+      "close": "2026-04-30",
+      "owner": "Marley Barnett",
+      "lostReason": ""
+    },
     {
       "id": "56608454732",
       "name": "Firmspace - Video/Photo",
@@ -979,20 +989,6 @@
       "start": null,
       "end": null,
       "outcome": null
-    },
-    {
-      "id": "106867767404",
-      "title": "Bunkr Golf x Marketwake | Growth Strategy Session",
-      "start": null,
-      "end": null,
-      "outcome": null
-    },
-    {
-      "id": "106981283202",
-      "title": "Untitled Meeting",
-      "start": null,
-      "end": null,
-      "outcome": "SCHEDULED"
     }
   ]
 }
