@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-29T20:43:33.735286+00:00",
+  "synced": "2026-04-30T00:08:52.002023+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -860,6 +860,13 @@
     }
   ],
   "meetings": [
+    {
+      "id": "108925813134",
+      "title": "Marketwake Meetup",
+      "start": null,
+      "end": null,
+      "outcome": null
+    },
     {
       "id": "108728551764",
       "title": "Ramping up referrals and mapping mountains (take 2!)",
