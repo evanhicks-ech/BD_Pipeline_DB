@@ -1,5 +1,5 @@
 {
-  "synced": "2026-04-30T09:24:13.851237+00:00",
+  "synced": "2026-04-30T15:57:55.258942+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -29,6 +29,21 @@
       "contacts": 1,
       "owner": "Marley Barnett",
       "dealType": "Upsell",
+      "description": ""
+    },
+    {
+      "id": "59814817946",
+      "name": "BluSky - Strategy & Growth",
+      "amount": 180000.0,
+      "prob": 0.35,
+      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
+      "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
+      "close": null,
+      "nextStep": "Send discovery questionnaire",
+      "lastAct": "2026-04-30",
+      "contacts": 1,
+      "owner": "Evan Hicks",
+      "dealType": "newbusiness",
       "description": ""
     },
     {
