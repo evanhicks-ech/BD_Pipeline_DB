@@ -1,5 +1,5 @@
 {
-  "synced": "2026-05-01T11:42:33.995162+00:00",
+  "synced": "2026-05-01T15:35:32.348402+00:00",
   "deals": [
     {
       "id": "58332124842",
@@ -54,9 +54,9 @@
       "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
       "stageId": "26b63b8f-a58d-4421-bcad-0273a00326db",
       "close": null,
-      "nextStep": "F/U w/ Rajat 4/29 (if he hasn't reached out yet)",
+      "nextStep": "F/U w/ Rajat to get RFP",
       "lastAct": "2026-05-01",
-      "contacts": 1,
+      "contacts": 3,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
       "description": ""
@@ -85,7 +85,7 @@
       "stageId": "270cf2bd-d2bc-4047-bf7b-c5e94032c0be",
       "close": null,
       "nextStep": "Schedule follow-up call for Kristen to bring on other E3Tech stakeholders",
-      "lastAct": "2026-04-28",
+      "lastAct": "2026-05-01",
       "contacts": 1,
       "owner": "Evan Hicks",
       "dealType": "newbusiness",
@@ -565,7 +565,7 @@
       "stageId": "947627921",
       "close": null,
       "nextStep": "",
-      "lastAct": "2026-04-30",
+      "lastAct": "2026-05-01",
       "contacts": 1,
       "owner": "Brooke MacLean",
       "dealType": "",
@@ -872,16 +872,6 @@
       "close": "2026-02-12",
       "owner": "Natalie Clauson",
       "lostReason": ""
-    },
-    {
-      "id": "53014686284",
-      "name": "The Physical AI Summit",
-      "amount": 0.0,
-      "pipe": "57c08100-c4cd-4a1e-a2ac-e90519f45454",
-      "dealType": "newbusiness",
-      "close": "2026-01-31",
-      "owner": "Brooke MacLean",
-      "lostReason": ""
     }
   ],
   "meetings": [
@@ -979,13 +969,6 @@
     {
       "id": "107318005006",
       "title": "City Lifestyle / Marketwake",
-      "start": null,
-      "end": null,
-      "outcome": null
-    },
-    {
-      "id": "107185693315",
-      "title": "Evan <> Jeremy: Marketwake Intro Call",
       "start": null,
       "end": null,
       "outcome": null
